@@ -1,0 +1,10 @@
+import { RequestMappingMetadata } from '../../interfaces/request-mapping-metadata.interface';
+export declare const RequestMapping: (metadata?: RequestMappingMetadata) => MethodDecorator;
+export declare const Post: (path?: string | string[]) => MethodDecorator;
+export declare const Get: (path?: string | string[]) => MethodDecorator;
+export declare const Delete: (path?: string | string[]) => MethodDecorator;
+export declare const Put: (path?: string | string[]) => MethodDecorator;
+export declare const Patch: (path?: string | string[]) => MethodDecorator;
+export declare const Options: (path?: string | string[]) => MethodDecorator;
+export declare const Head: (path?: string | string[]) => MethodDecorator;
+export declare const All: (path?: string | string[]) => MethodDecorator;
