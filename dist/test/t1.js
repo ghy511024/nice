@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
 const http = require('http');
-const Nice_1 = require("../nice/Nice");
+const nice_1 = require("../src/nice");
 function xixi() {
     return function (req, res, next) {
         console.log('xixixixixix');
@@ -36,23 +36,23 @@ let Home = class Home {
     }
 };
 __decorate([
-    Nice_1.Get("/data"),
-    Nice_1.Mid(xixi(), haha),
+    nice_1.Get("/data"),
+    nice_1.Mid(xixi(), haha),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "Filter", null);
 __decorate([
-    Nice_1.All('/book'),
+    nice_1.All('/book'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "getBook", null);
 Home = __decorate([
-    Nice_1.Controller('/active'),
-    Nice_1.Filter(hehe)
+    nice_1.Controller('/active'),
+    nice_1.Filter(hehe)
 ], Home);
-var nice = new Nice_1.Nice(app);
+var nice = new nice_1.Nice(app);
 nice.use(Home);
 app.use(function (req, res, next) {
     res.send('404 404');

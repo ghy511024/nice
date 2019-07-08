@@ -1,6 +1,6 @@
 {
   "name": "Nice",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "express": "~4.15.2",
     "iterare": "^1.2.0",
