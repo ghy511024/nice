@@ -1,6 +1,8 @@
 {
   "name": "Nice",
   "version": "0.0.1",
+  "main": "./dist/nice.js",
+  "types": "./dist/nice.d.ts",
   "dependencies": {
     "express": "~4.15.2",
     "iterare": "^1.2.0",
