@@ -44,7 +44,7 @@ export class RouterExplorer {
             const {path, requestMethod} = pathProperties;
             this.applyCallbackToRouter(pathProperties, basePath, root_filter);
             path.forEach(p => {
-                    // this.logger('hahah:', p, requestMethod, requestMethod);
+                    // this.logger('path scan:', p);
                 }
             );
         });
@@ -86,12 +86,12 @@ export class RouterExplorer {
         );
         paths.forEach(path => {
             const fullPath = stripSlash(basePath) + path;
+            console.log('fullPath:',fullPath)
             if (all_filter.length > 0) {
                 routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
             } else {
                 routerMethod(stripSlash(fullPath) || '/', proxy);
             }
-
         });
     }
 

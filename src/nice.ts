@@ -12,7 +12,7 @@ export class Nice {
         this.routesResolver = new RoutesResolver(app)
     }
 
-    use(...handlers) {
+    use(...handlers:any[]) {
         if (handlers.length >= 1) {
             let rootPath = ''
             if (typeof handlers[0] == 'string') {

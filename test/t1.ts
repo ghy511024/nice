@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -39,11 +38,19 @@ class Home {
     getBook(req, res) {
         res.send('bok');
     }
+
+    @All(':_id')
+    xi1(req, res) {
+        let {_id} = req.params;
+        res.send('_id:' + _id);
+    }
+
 }
 
 
-var nice = new Nice(app)
+let nice = new Nice(app);
 nice.use(Home);
+
 app.use(function (req, res, next) {
     res.send('404 404');
 })

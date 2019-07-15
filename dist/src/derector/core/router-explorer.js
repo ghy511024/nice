@@ -48,6 +48,7 @@ class RouterExplorer {
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
             const fullPath = stripSlash(basePath) + path;
+            console.log('fullPath:', fullPath);
             if (all_filter.length > 0) {
                 routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
             }

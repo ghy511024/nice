@@ -34,6 +34,10 @@ let Home = class Home {
     getBook(req, res) {
         res.send('bok');
     }
+    xi1(req, res) {
+        let { _id } = req.params;
+        res.send('_id:' + _id);
+    }
 };
 __decorate([
     nice_1.Get("/data"),
@@ -48,11 +52,17 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "getBook", null);
+__decorate([
+    nice_1.All(':_id'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], Home.prototype, "xi1", null);
 Home = __decorate([
     nice_1.Controller('/active'),
     nice_1.Filter(hehe)
 ], Home);
-var nice = new nice_1.Nice(app);
+let nice = new nice_1.Nice(app);
 nice.use(Home);
 app.use(function (req, res, next) {
     res.send('404 404');
