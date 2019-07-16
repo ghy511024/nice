@@ -17,6 +17,7 @@ interface niceConfig {
 }
 
 export class Nice {
+
     private routesResolver: RoutesResolver;
     private config: niceConfig;
     private app: any;

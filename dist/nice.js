@@ -44,4 +44,4 @@ class Nice {
         }, 100);
     }
 }
-exports.Fnice = Nice;
+exports.Nice = Nice;
