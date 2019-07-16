@@ -7,7 +7,7 @@ interface niceConfig {
         interval?: number;
     };
 }
-export declare class Nice {
+export declare class Fnice {
     private routesResolver;
     private config;
     private app;

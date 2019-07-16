@@ -3,86 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Factory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/constants.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/metadata-scanner.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/metadata-scanner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-explorer.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-explorer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-proxy.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-proxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/http-status.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/http-status.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/request-method.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/request-method.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/route-paramtypes.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/route-paramtypes.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/shutdown-signal.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/shutdown-signal.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/transport.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/enums/transport.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/controller.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/controller.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/injectable.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/injectable.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/request-mapping-metadata.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/request-mapping-metadata.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/type.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/interfaces/type.interface.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/nice.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/nice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/constants.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/metadata-scanner.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/metadata-scanner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/enums/request-method.enum.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/enums/request-method.enum.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/controller.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/controller.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/injectable.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/injectable.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/request-mapping-metadata.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/request-mapping-metadata.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/type.interface.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/type.interface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/nice.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/nice.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/utils/shared.utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/utils/shared.utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/t1.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/t1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/utils/shared.utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/utils/shared.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/nice.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/nice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/derector/core/RoutesResolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/RoutesResolver.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/derector/core/router-explorer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/router-explorer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/nice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Factory.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/aa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/router_test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/t1.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -107,15 +32,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dist/nice.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="80">
@@ -124,11 +40,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/nice.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="172">
-                  <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+                <state relative-caret-position="832">
+                  <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -163,11 +79,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+                <state relative-caret-position="16">
+                  <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -200,8 +116,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/demo.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="348">
-                  <caret line="80" column="27" lean-forward="true" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+                <state relative-caret-position="96">
+                  <caret line="6" column="18" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -237,16 +153,16 @@
         <option value="$PROJECT_DIR$/src/derector/core/router-explorer.ts" />
         <option value="$PROJECT_DIR$/src/derector/constants.ts" />
         <option value="$PROJECT_DIR$/test/t1.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/test/demo.ts" />
         <option value="$PROJECT_DIR$/src/nice.ts" />
+        <option value="$PROJECT_DIR$/test/demo.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="217" />
-    <option name="y" value="44" />
+    <option name="x" value="295" />
+    <option name="y" value="29" />
     <option name="width" value="1914" />
     <option name="height" value="902" />
   </component>
@@ -328,15 +244,15 @@
       <workItem from="1562552943410" duration="4330000" />
       <workItem from="1562578299598" duration="598000" />
       <workItem from="1562587771516" duration="272000" />
-      <workItem from="1563154747660" duration="19961000" />
+      <workItem from="1563154747660" duration="20604000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25161000" />
+    <option name="totallyTimeSpent" value="25804000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1069" y="29" width="1914" height="902" extended-state="0" />
+    <frame x="295" y="29" width="1914" height="902" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15565032" />
@@ -344,7 +260,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899868" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33289987" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33289987" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,7 +268,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32769832" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32769832" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -566,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -589,15 +498,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nice.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="832">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/demo.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="80" column="27" lean-forward="true" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+        <state relative-caret-position="96">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>

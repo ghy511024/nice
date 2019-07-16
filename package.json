@@ -1,6 +1,6 @@
 {
   "name": "nice",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./dist/nice.js",
   "types": "./dist/nice.d.ts",
   "dependencies": {

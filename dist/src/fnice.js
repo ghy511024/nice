@@ -14,7 +14,7 @@ exports.All = fun_decorator_1.All;
 exports.Filter = fun_decorator_1.Filter;
 exports.Mid = fun_decorator_1.Mid;
 const WFManager = require("wfmanager");
-class Nice {
+class Fnice {
     constructor(app, config) {
         this.routesResolver = new RoutesResolver_1.RoutesResolver(app);
         this.config = config;
@@ -44,4 +44,4 @@ class Nice {
         }, 100);
     }
 }
-exports.Nice = Nice;
+exports.Fnice = Fnice;
