@@ -15,5 +15,8 @@ class RoutesResolver {
         let filter = Reflect.getMetadata(constants_1.FILTER_METADATA, userRoutes);
         this.routerBuilder.explore(instance, basepath, filter);
     }
+    getAllPaths() {
+        return this.routerBuilder.getAllpaths();
+    }
 }
 exports.RoutesResolver = RoutesResolver;

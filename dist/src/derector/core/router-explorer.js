@@ -17,7 +17,11 @@ class RouterExplorer {
         this.metadataScanner = metadataScanner;
         this.routerMethodFactory = new router_method_factory_1.RouterMethodFactory();
         this.exceptionFiltersCache = new WeakMap();
+        this.allPaths = [];
         this.applicationRef = applicationRef;
+    }
+    getAllpaths() {
+        return this.allPaths;
     }
     explore(instance, basePath, root_filter) {
         const routerPaths = this.scanForPaths(instance);
@@ -27,6 +31,7 @@ class RouterExplorer {
         console.log(...arg);
     }
     applyPathsToRouterProxy(routePaths, basePath, root_filter) {
+        let pathArray = [];
         (routePaths || []).forEach(pathProperties => {
             const { path, requestMethod } = pathProperties;
             this.applyCallbackToRouter(pathProperties, basePath, root_filter);
@@ -48,7 +53,7 @@ class RouterExplorer {
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
             const fullPath = stripSlash(basePath) + path;
-            console.log('fullPath:', fullPath);
+            this.allPaths.push(fullPath);
             if (all_filter.length > 0) {
                 routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
             }
@@ -57,6 +62,10 @@ class RouterExplorer {
             }
         });
     }
+    stripSlash(str) {
+        return str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
+    }
+    ;
     extractRouterPath(metatype, prefix) {
         let path = Reflect.getMetadata(constants_1.PATH_METADATA, metatype);
         if (prefix)

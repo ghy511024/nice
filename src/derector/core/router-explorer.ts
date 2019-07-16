@@ -8,6 +8,9 @@ import {isString, isUndefined, validatePath} from '../../utils/shared.utils';
 import {MetadataScanner} from './metadata-scanner';
 import {RouterMethodFactory} from './router-method-factory';
 
+
+
+
 export interface RoutePathProperties {
     path: string[];
     requestMethod: RequestMethod;
@@ -23,9 +26,14 @@ export class RouterExplorer {
     private readonly routerMethodFactory = new RouterMethodFactory();
     private readonly exceptionFiltersCache = new WeakMap();
     private applicationRef: any;
+    private allPaths: string[] = [];
 
     constructor(private readonly metadataScanner: MetadataScanner, applicationRef) {
         this.applicationRef = applicationRef;
+    }
+
+    public getAllpaths(): string[] {
+        return this.allPaths;
     }
 
     public explore(instance, basePath: string, root_filter) {
@@ -40,11 +48,14 @@ export class RouterExplorer {
     }
 
     public applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter) {
+        let pathArray = [];
         (routePaths || []).forEach(pathProperties => {
             const {path, requestMethod} = pathProperties;
             this.applyCallbackToRouter(pathProperties, basePath, root_filter);
+
             path.forEach(p => {
-                    // this.logger('path scan:', p);
+                    // const fullPath = this.stripSlash(basePath) + p;
+                    // pathArray.push(fullPath)
                 }
             );
         });
@@ -70,8 +81,7 @@ export class RouterExplorer {
         if (midware) {
             all_filter = all_filter.concat(midware)
         }
-        const stripSlash = (str: string) =>
-            str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
+        const stripSlash = (str: string) => str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
 
         // const isRequestScoped = !instanceWrapper.isDependencyTreeStatic();
         // const module = this.container.getModuleByKey(moduleKey);
@@ -84,17 +94,22 @@ export class RouterExplorer {
             // moduleKey,
             // requestMethod,
         );
+
         paths.forEach(path => {
             const fullPath = stripSlash(basePath) + path;
-            console.log('fullPath:',fullPath)
+            this.allPaths.push(fullPath)
             if (all_filter.length > 0) {
                 routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
             } else {
                 routerMethod(stripSlash(fullPath) || '/', proxy);
             }
         });
+
     }
 
+    stripSlash(str: string) {
+        return str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str
+    };
 
     public extractRouterPath(
         metatype: Type<Controller>,

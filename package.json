@@ -4,14 +4,15 @@
   "main": "./dist/nice.js",
   "types": "./dist/nice.d.ts",
   "dependencies": {
+    "wfmanager": "^1.1.1"
+  },
+  "description": "a mvc framework for express",
+  "repository": "git@igit.58corp.com:fanglib/nice.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.0.12",
     "express": "~4.15.2",
     "iterare": "^1.2.0",
     "reflect-metadata": "^0.1.13"
-  },
-  "description": "a mvc framework for express",
-  "repository": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^12.0.12"
   }
 }

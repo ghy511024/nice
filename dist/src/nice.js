@@ -13,9 +13,13 @@ exports.Head = fun_decorator_1.Head;
 exports.All = fun_decorator_1.All;
 exports.Filter = fun_decorator_1.Filter;
 exports.Mid = fun_decorator_1.Mid;
+const WFManager = require("wfmanager");
 class Nice {
-    constructor(app) {
+    constructor(app, config) {
         this.routesResolver = new RoutesResolver_1.RoutesResolver(app);
+        this.config = config;
+        this.app = app;
+        this.initWF();
     }
     use(...handlers) {
         if (handlers.length >= 1) {
@@ -28,6 +32,16 @@ class Nice {
                 this.routesResolver.registerRouters(handlers[i], rootPath);
             }
         }
+    }
+    initWF() {
+        this.app.use(WFManager.express());
+        setTimeout(() => {
+            let option = { urls: this.routesResolver.getAllPaths() };
+            if (this.config && this.config.wf) {
+                option = Object.assign(option, this.config.wf);
+            }
+            WFManager.init(option);
+        }, 100);
     }
 }
 exports.Nice = Nice;

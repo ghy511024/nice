@@ -16,11 +16,14 @@ export declare class RouterExplorer {
     private readonly routerMethodFactory;
     private readonly exceptionFiltersCache;
     private applicationRef;
+    private allPaths;
     constructor(metadataScanner: MetadataScanner, applicationRef: any);
+    getAllpaths(): string[];
     explore(instance: any, basePath: string, root_filter: any): void;
     logger(...arg: any[]): void;
     applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter: any): void;
     private applyCallbackToRouter;
+    stripSlash(str: string): string;
     extractRouterPath(metatype: Type<Controller>, prefix?: string): string;
     validateRoutePath(path: string): string;
     scanForPaths(instance: Controller, prototype?: any): RoutePathProperties[];

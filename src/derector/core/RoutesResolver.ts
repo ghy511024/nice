@@ -4,7 +4,7 @@ import {FILTER_METADATA} from '../constants';
 
 export class RoutesResolver {
 
-    private routerBuilder: any;
+    private routerBuilder: RouterExplorer;
     private applicationRef: any;
     private metadataScanner: MetadataScanner;
 
@@ -22,5 +22,9 @@ export class RoutesResolver {
         let filter = Reflect.getMetadata(FILTER_METADATA, userRoutes);
 
         this.routerBuilder.explore(instance, basepath, filter);
+    }
+
+    getAllPaths(): string[] {
+        return this.routerBuilder.getAllpaths();
     }
 }
