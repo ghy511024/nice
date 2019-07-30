@@ -1,8 +1,8 @@
 {
   "name": "@fang/router",
   "version": "1.0.0",
-  "main": "./dist/nice.js",
-  "types": "./dist/nice.d.ts",
+  "main": "./dist/Router.js",
+  "types": "./dist/Router.d.ts",
   "dependencies": {
     "wfmanager": "^1.1.1",
     "reflect-metadata": "^0.1.13",
