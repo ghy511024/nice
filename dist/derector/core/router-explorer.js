@@ -43,7 +43,6 @@ class RouterExplorer {
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
             const fullPath = shared_utils_1.cleanUrl(basePath) + path;
-            console.log({ basePath, fullPath, "afterPath": fullPath });
             this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
             if (all_filter.length > 0) {
                 routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', all_filter, proxy);

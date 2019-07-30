@@ -75,7 +75,6 @@ export class RouterExplorer {
 
         paths.forEach(path => {
             const fullPath = cleanUrl(basePath) + path;
-            console.log({basePath, fullPath, "afterPath": fullPath})
             this.allPaths.push(cleanUrl(fullPath) || '/')
             if (all_filter.length > 0) {
                 routerMethod(cleanUrl(fullPath) || '/', all_filter, proxy);
