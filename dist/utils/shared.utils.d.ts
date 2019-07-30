@@ -7,3 +7,4 @@ export declare const isConstructor: (fn: any) => boolean;
 export declare const isNil: (obj: any) => obj is null;
 export declare const isEmpty: (array: any) => boolean;
 export declare const isSymbol: (fn: any) => fn is symbol;
+export declare const cleanUrl: (str: string) => string;

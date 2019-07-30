@@ -4,11 +4,9 @@ import {RequestMethod} from '../../enums/request-method.enum';
 import {RouterProxyCallback} from './router-proxy';
 import {Controller} from '../../interfaces/controller.interface';
 import {Type} from '../../interfaces/type.interface';
-import {isString, isUndefined, validatePath} from '../../utils/shared.utils';
+import {isString, isUndefined, validatePath, cleanUrl} from '../../utils/shared.utils';
 import {MetadataScanner} from './metadata-scanner';
 import {RouterMethodFactory} from './router-method-factory';
-
-
 
 
 export interface RoutePathProperties {
@@ -20,8 +18,6 @@ export interface RoutePathProperties {
 }
 
 export class RouterExplorer {
-
-    // private readonly executionContextCreator: RouterExecutionContext;
 
     private readonly routerMethodFactory = new RouterMethodFactory();
     private readonly exceptionFiltersCache = new WeakMap();
@@ -52,12 +48,6 @@ export class RouterExplorer {
         (routePaths || []).forEach(pathProperties => {
             const {path, requestMethod} = pathProperties;
             this.applyCallbackToRouter(pathProperties, basePath, root_filter);
-
-            path.forEach(p => {
-                    // const fullPath = this.stripSlash(basePath) + p;
-                    // pathArray.push(fullPath)
-                }
-            );
         });
     }
 
@@ -70,8 +60,6 @@ export class RouterExplorer {
             midware
         } = pathProperties;
 
-        // const {instance} = instanceWrapper;
-
         const routerMethod = this.routerMethodFactory.get(this.applicationRef, requestMethod).bind(this.applicationRef);
 
         let all_filter = []
@@ -81,35 +69,23 @@ export class RouterExplorer {
         if (midware) {
             all_filter = all_filter.concat(midware)
         }
-        const stripSlash = (str: string) => str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
-
-        // const isRequestScoped = !instanceWrapper.isDependencyTreeStatic();
-        // const module = this.container.getModuleByKey(moduleKey);
-
-
         const proxy = this.createCallbackProxy(
-            // instance,
             targetCallback,
-            // methodName,
-            // moduleKey,
-            // requestMethod,
         );
 
         paths.forEach(path => {
-            const fullPath = stripSlash(basePath) + path;
-            this.allPaths.push(fullPath)
+            const fullPath = cleanUrl(basePath) + path;
+            console.log({basePath, fullPath, "afterPath": fullPath})
+            this.allPaths.push(cleanUrl(fullPath) || '/')
             if (all_filter.length > 0) {
-                routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
+                routerMethod(cleanUrl(fullPath) || '/', all_filter, proxy);
             } else {
-                routerMethod(stripSlash(fullPath) || '/', proxy);
+                routerMethod(cleanUrl(fullPath) || '/', proxy);
             }
         });
 
     }
 
-    stripSlash(str: string) {
-        return str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str
-    };
 
     public extractRouterPath(
         metatype: Type<Controller>,
@@ -169,12 +145,7 @@ export class RouterExplorer {
     }
 
     private createCallbackProxy(
-        // instance: Controller,
         callback: RouterProxyCallback,
-        // methodName: string,
-        // module: string,
-        // requestMethod: RequestMethod,
-        // inquirerId?: string,
     ) {
         return async (req, res, next,) => {
             await callback(req, res, next);

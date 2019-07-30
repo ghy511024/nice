@@ -1,5 +1,5 @@
 export { Controller, Get, Post, Delete, Put, Patch, Options, Head, All, Filter, Mid } from './fun.decorator';
-interface niceConfig {
+interface routerConfig {
     wf?: {
         cluster: string;
         server?: string;
@@ -7,11 +7,11 @@ interface niceConfig {
         interval?: number;
     };
 }
-export declare class Fnice {
+export declare class Router {
     private routesResolver;
     private config;
     private app;
-    constructor(app: any, config?: niceConfig);
+    constructor(app: any, config?: routerConfig);
     use(...handlers: any[]): void;
     private initWF;
 }

@@ -23,7 +23,6 @@ export declare class RouterExplorer {
     logger(...arg: any[]): void;
     applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter: any): void;
     private applyCallbackToRouter;
-    stripSlash(str: string): string;
     extractRouterPath(metatype: Type<Controller>, prefix?: string): string;
     validateRoutePath(path: string): string;
     scanForPaths(instance: Controller, prototype?: any): RoutePathProperties[];

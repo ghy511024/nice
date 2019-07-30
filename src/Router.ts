@@ -7,7 +7,8 @@ export {
 
 import WFManager = require("wfmanager");
 
-interface niceConfig {
+interface routerConfig {
+
     wf?: {
         cluster: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson
         server?: string,  // 模拟服务器所在ip 地址 例如 "10.144.46.150:8888",
@@ -16,13 +17,13 @@ interface niceConfig {
     }
 }
 
-export class Nice {
+export class Router {
 
     private routesResolver: RoutesResolver;
-    private config: niceConfig;
+    private config: routerConfig;
     private app: any;
 
-    constructor(app, config?: niceConfig) {
+    constructor(app, config?: routerConfig) {
         this.routesResolver = new RoutesResolver(app);
         this.config = config;
         this.app = app;

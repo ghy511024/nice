@@ -9,3 +9,11 @@ exports.isConstructor = (fn) => fn === 'constructor';
 exports.isNil = (obj) => exports.isUndefined(obj) || obj === null;
 exports.isEmpty = (array) => !(array && array.length > 0);
 exports.isSymbol = (fn) => typeof fn === 'symbol';
+exports.cleanUrl = (str) => {
+    let result = str;
+    result = result.replace(/^\/+/gi, '/');
+    if (result[result.length - 1] === '/') {
+        result = result.slice(0, result.length - 1);
+    }
+    return result;
+};

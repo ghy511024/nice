@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 
-import {Nice, Controller, Post, Get, Mid, Filter, All} from '../src/nice';
+import {Router, Controller, Post, Get, Mid, Filter, All} from '../src/nice';
 
 //=========这些都是中间件================
 function xixi() {
@@ -62,7 +62,7 @@ class Page {
 }
 
 
-let nice = new Nice(app, {
+let nice = new Router(app, {
     wf: {
         cluster: "hbg_fangfe_node_fjson",
         server: "10.144.46.150:8888",

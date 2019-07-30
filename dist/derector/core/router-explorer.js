@@ -28,8 +28,6 @@ class RouterExplorer {
         (routePaths || []).forEach(pathProperties => {
             const { path, requestMethod } = pathProperties;
             this.applyCallbackToRouter(pathProperties, basePath, root_filter);
-            path.forEach(p => {
-            });
         });
     }
     applyCallbackToRouter(pathProperties, basePath, root_filter) {
@@ -42,23 +40,19 @@ class RouterExplorer {
         if (midware) {
             all_filter = all_filter.concat(midware);
         }
-        const stripSlash = (str) => str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
-            const fullPath = stripSlash(basePath) + path;
-            this.allPaths.push(fullPath);
+            const fullPath = shared_utils_1.cleanUrl(basePath) + path;
+            console.log({ basePath, fullPath, "afterPath": fullPath });
+            this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
             if (all_filter.length > 0) {
-                routerMethod(stripSlash(fullPath) || '/', all_filter, proxy);
+                routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', all_filter, proxy);
             }
             else {
-                routerMethod(stripSlash(fullPath) || '/', proxy);
+                routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', proxy);
             }
         });
     }
-    stripSlash(str) {
-        return str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
-    }
-    ;
     extractRouterPath(metatype, prefix) {
         let path = Reflect.getMetadata(constants_1.PATH_METADATA, metatype);
         if (prefix)
