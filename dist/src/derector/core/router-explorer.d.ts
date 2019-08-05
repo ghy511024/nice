@@ -17,7 +17,6 @@ export declare class RouterExplorer {
     private readonly exceptionFiltersCache;
     private applicationRef;
     private allPaths;
-    private routerProxy;
     constructor(metadataScanner: MetadataScanner, applicationRef: any);
     getAllpaths(): string[];
     explore(instance: any, basePath: string, root_filter: any): void;

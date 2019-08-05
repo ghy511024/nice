@@ -8,7 +8,20 @@ class RouterProxy {
                 yield targetCallback(req, res, next);
             }
             catch (e) {
-                console.log('my exception', e);
+                let obj = {};
+                try {
+                    obj = JSON.parse(e + '');
+                }
+                catch (e2) {
+                    obj['code'] = -100;
+                    obj['desc'] = e + '';
+                }
+                let myc = "\x1B[0;31m";
+                var time = `[${new Date().toLocaleString()}]`;
+                var msg = myc + time + '\x1B[0m ';
+                console.error(msg, e);
+                res.status(500);
+                res.send(obj);
             }
         });
     }

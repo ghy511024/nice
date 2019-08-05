@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
 require("reflect-metadata");
 const constants_1 = require("../constants");
-const router_proxy_1 = require("./router-proxy");
 const shared_utils_1 = require("../../utils/shared.utils");
 const router_method_factory_1 = require("./router-method-factory");
 class RouterExplorer {
@@ -11,7 +11,6 @@ class RouterExplorer {
         this.routerMethodFactory = new router_method_factory_1.RouterMethodFactory();
         this.exceptionFiltersCache = new WeakMap();
         this.allPaths = [];
-        this.routerProxy = new router_proxy_1.RouterProxy();
         this.applicationRef = applicationRef;
     }
     getAllpaths() {
@@ -91,7 +90,9 @@ class RouterExplorer {
         };
     }
     createCallbackProxy(callback) {
-        return this.routerProxy.createProxy(callback);
+        return (req, res, next) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            yield callback(req, res, next);
+        });
     }
 }
 exports.RouterExplorer = RouterExplorer;

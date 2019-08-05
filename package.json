@@ -1,6 +1,6 @@
 {
   "name": "@fang/router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
   "dependencies": {
