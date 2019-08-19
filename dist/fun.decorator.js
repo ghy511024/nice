@@ -35,7 +35,14 @@ const createMappingDecorator = (method) => {
 const createMidWareDecorator = () => {
     return function (...arg) {
         return (target, key, descriptor) => {
-            Reflect.defineMetadata(constants_1.MIDDLEWARE_METADATA, arg, descriptor.value);
+            let midwareArray = Reflect.getMetadata(constants_1.MIDDLEWARE_METADATA, target);
+            if (midwareArray && midwareArray instanceof Array && midwareArray.length > 0) {
+                midwareArray = midwareArray.concat(arg);
+            }
+            else {
+                midwareArray = arg;
+            }
+            Reflect.defineMetadata(constants_1.MIDDLEWARE_METADATA, midwareArray, descriptor.value);
             return descriptor;
         };
     };

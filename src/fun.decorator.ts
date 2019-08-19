@@ -1,8 +1,9 @@
-import {METHOD_METADATA, PATH_METADATA, MIDDLEWARE_METADATA,FILTER_METADATA} from './derector/constants';
+import {METHOD_METADATA, PATH_METADATA, MIDDLEWARE_METADATA, FILTER_METADATA} from './derector/constants';
 import {RequestMethod} from './enums/request-method.enum';
 import {RequestMappingMetadata} from './interfaces/request-mapping-metadata.interface';
 import {isString, isUndefined} from "./utils/shared.utils";
 import "reflect-metadata";
+
 export enum Scope {
     DEFAULT,
     TRANSIENT,
@@ -44,12 +45,19 @@ const createMappingDecorator = (method: RequestMethod) => {
 const createMidWareDecorator = () => {
     return function (...arg) {
         return (target, key, descriptor: PropertyDescriptor) => {
-            Reflect.defineMetadata(MIDDLEWARE_METADATA, arg, descriptor.value);
+            let midwareArray = Reflect.getMetadata(MIDDLEWARE_METADATA, target);
+
+            if (midwareArray && midwareArray instanceof Array && midwareArray.length > 0) {
+                midwareArray = midwareArray.concat(arg)
+            } else {
+                midwareArray = arg;
+            }
+
+            Reflect.defineMetadata(MIDDLEWARE_METADATA, midwareArray, descriptor.value);
             return descriptor;
         };
     }
 };
-
 
 
 export function Controller(): ClassDecorator;
