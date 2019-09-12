@@ -3,153 +3,89 @@
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/fun.decorator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Router.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/demo.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/demo2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/demo2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/constants.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/metadata-scanner.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/metadata-scanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-explorer.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-explorer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-proxy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-proxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/http-status.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/http-status.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/request-method.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/request-method.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/route-paramtypes.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/route-paramtypes.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/shutdown-signal.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/shutdown-signal.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/transport.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/enums/transport.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/controller.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/controller.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/injectable.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/injectable.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/request-mapping-metadata.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/request-mapping-metadata.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/type.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/interfaces/type.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/Router.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/Router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/constants.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/metadata-scanner.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/metadata-scanner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/enums/request-method.enum.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/enums/request-method.enum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/controller.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/controller.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/injectable.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/injectable.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/request-mapping-metadata.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/request-mapping-metadata.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/type.interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/interfaces/type.interface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/utils/shared.utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/utils/shared.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/demo2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/demo2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/shared.utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/utils/shared.utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/demo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/demo2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46314326">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Router.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/wfmanager/dist/WFManager.d.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/wfmanager/src/WFManager.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1024">
-                  <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/derector/core/router-method-factory.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/derector/core/router-proxy.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fun.decorator.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="314">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
-                  <folding>
-                    <element signature="e#0#105#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/a.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/derector/core/RoutesResolver.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#49#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/demo.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="736">
-                  <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/demo2.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
-                  <caret line="41" selection-start-line="41" selection-end-line="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/derector/core/router-explorer.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,127 +94,12 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>path</find>
-      <find>path-to-regexp</find>
-      <find>layer</find>
-      <find>regexp</find>
-      <find>Layer</find>
-      <find>keys</find>
-      <find>ghy</find>
-      <find>stripSlash</find>
-      <find>regist url</find>
-      <find>allPaths</find>
-      <find>wfmanager</find>
-      <find>try</find>
-      <find>console</find>
-      <find>RouterProxy</find>
-      <find>wf</find>
-      <find>createProxy</find>
-      <find>extractRouterPath</find>
-      <find>midware</find>
-      <find>registerRouters</find>
-    </findStrings>
-    <dirStrings>
-      <dir>E:\develop\workespace\58git_public\nice\node_modules\express</dir>
-      <dir>E:\develop\workespace\58git_public\nice</dir>
-      <dir>E:\develop\workespace\58git_public\nice\src</dir>
-      <dir>E:\develop\workespace\58git_public\nice\src\derector\core</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/node_modules/express/lib/express.js" />
-        <option value="$PROJECT_DIR$/src/derector/core/RoutesResolver.ts" />
-        <option value="$PROJECT_DIR$/src/derector/constants.ts" />
-        <option value="$PROJECT_DIR$/test/t1.ts" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/nice.ts" />
-        <option value="$PROJECT_DIR$/test/demo.ts" />
-        <option value="$PROJECT_DIR$/test/demo2.ts" />
-        <option value="$PROJECT_DIR$/src/utils/shared.utils.ts" />
-        <option value="$PROJECT_DIR$/test/a.js" />
-        <option value="$PROJECT_DIR$/src/derector/core/router-explorer.ts" />
-        <option value="$PROJECT_DIR$/src/derector/core/router-proxy.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/fun.decorator.ts" />
-        <option value="$PROJECT_DIR$/src/Router.ts" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="579" />
-    <option name="y" value="67" />
-    <option name="width" value="1768" />
-    <option name="height" value="902" />
-  </component>
+  <component name="ProjectId" id="1Qj8AmNwH0cGr9HZyOpTgdjSD2V" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="derector" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="derector" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nice" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -288,7 +109,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.1.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -329,55 +150,10 @@
       <workItem from="1563876896088" duration="155000" />
       <workItem from="1564468776542" duration="9544000" />
       <workItem from="1564975758446" duration="7448000" />
-      <workItem from="1566210603579" duration="2450000" />
+      <workItem from="1566210603579" duration="2572000" />
+      <workItem from="1568272505486" duration="422000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50616000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="579" y="67" width="1768" height="902" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16878612" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33289987" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3719116" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32987013" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -389,234 +165,15 @@
       </list>
     </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/a.ts" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/fun.decorator.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/Factory.d.ts" />
-    <entry file="file://$PROJECT_DIR$/dist/Factory.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/express.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="103" column="19" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/debug/src/node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/debug/src/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wfmanager/dist/WFManager.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/derector/constants.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/aa.js" />
-    <entry file="file://$PROJECT_DIR$/test/Factory.ts" />
-    <entry file="file://$PROJECT_DIR$/test/server.js" />
-    <entry file="file://$PROJECT_DIR$/test/router_test.js" />
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2192">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/wfmanager/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2608">
-          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/nice.js" />
-    <entry file="file://$PROJECT_DIR$/src/utils/shared.utils.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/request-mapping-metadata.interface.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/type.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/injectable.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/controller.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/wfmanager/dist/WFManager.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/wfmanager/src/WFManager.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/derector/core/router-method-factory.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/derector/core/router-proxy.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/a.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/demo.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/demo2.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/derector/core/RoutesResolver.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fun.decorator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/derector/core/router-explorer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Router.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

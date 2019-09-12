@@ -10,10 +10,10 @@
     "experimentalDecorators": true,
     "target": "es2015",
     "sourceMap": false,
-    "allowJs": true,
+    "allowJs": false,
     "outDir": "./dist",
     "baseUrl": ".",
-    "importHelpers": true
+    "importHelpers": false
   },
   "include": [
     "src/**/*"

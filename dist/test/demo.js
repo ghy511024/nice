@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
 const http = require('http');
-const src_1 = require("../src/");
+const Router_1 = require("../src/Router");
 function xixi() {
     return function (req, res, next) {
         console.log('xixixixixix');
@@ -40,27 +40,27 @@ let Home = class Home {
     }
 };
 __decorate([
-    src_1.Get("/data"),
-    src_1.Mid(xixi(), haha),
+    Router_1.Get("/data"),
+    Router_1.Mid(xixi(), haha),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "data", null);
 __decorate([
-    src_1.All('/book'),
+    Router_1.All('/book'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "getBook", null);
 __decorate([
-    src_1.All(':_id'),
+    Router_1.All(':_id'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Home.prototype, "xi1", null);
 Home = __decorate([
-    src_1.Controller('/active'),
-    src_1.Filter(hehe)
+    Router_1.Controller('/active'),
+    Router_1.Filter(hehe)
 ], Home);
 let Page = class Page {
     Filter(req, res) {
@@ -72,21 +72,21 @@ let Page = class Page {
     }
 };
 __decorate([
-    src_1.Get("xixi"),
+    Router_1.Get("xixi"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Page.prototype, "Filter", null);
 __decorate([
-    src_1.All('/nice/:_id'),
+    Router_1.All('/nice/:_id'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Page.prototype, "xi1", null);
 Page = __decorate([
-    src_1.Controller('page')
+    Router_1.Controller('page')
 ], Page);
-let nice = new src_1.Router(app, {
+let nice = new Router_1.Router(app, {
     wf: {
         cluster: "hbg_fangfe_node_fjson",
         server: "10.144.46.150:8888",

@@ -3,8 +3,6 @@ const app = express();
 const http = require('http');
 
 import {Router, Controller, Post, Get, Mid, Filter, All} from '../src/Router';
-
-
 @Controller()
 class Page {
     @Get("xixi")

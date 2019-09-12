@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 
-import {Router, Controller, Post, Get, Mid, Filter, All} from '../src/nice';
+import {Router, Controller, Post, Get, Mid, Filter, All} from '../src/Router';
 
 //=========这些都是中间件================
 function xixi() {
