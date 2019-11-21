@@ -43,13 +43,23 @@ const createMappingDecorator = (method: RequestMethod) => {
 };
 
 const createMidWareDecorator = () => {
-    return function (...arg) {
+    return function (arg) {
         return (target, key, descriptor: PropertyDescriptor) => {
             let midwareArray = Reflect.getMetadata(MIDDLEWARE_METADATA, target);
 
             if (midwareArray && midwareArray instanceof Array && midwareArray.length > 0) {
-                midwareArray = midwareArray.concat(arg)
-            } else {
+                let _arg;
+                if (typeof arg == 'function') {
+                    _arg = [arg]
+                } else if (arg instanceof Array) {
+                    _arg = arg
+                }
+                if (_arg) {
+                    midwareArray = midwareArray.concat(_arg)
+                }
+            } else if (typeof arg == 'function') {
+                midwareArray = [arg];
+            } else if (arg instanceof Array) {
                 midwareArray = arg;
             }
 
@@ -94,8 +104,11 @@ export const All = createMappingDecorator(RequestMethod.ALL);
 
 export const Mid = createMidWareDecorator();
 
-export function Filter(...arg): ClassDecorator {
+export function Filter(arg): ClassDecorator {
     return (target: object) => {
+        if (typeof arg == 'function') {
+            arg = [arg];
+        }
         Reflect.defineMetadata(FILTER_METADATA, arg, target);
     };
 }

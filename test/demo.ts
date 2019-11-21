@@ -19,7 +19,6 @@ function haha(req, res, next) {
 
 function hehe(req, res, next) {
     console.log('hehe')
-
     next();
 }
 

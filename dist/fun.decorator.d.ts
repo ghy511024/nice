@@ -21,5 +21,5 @@ export declare const Patch: (path?: string | string[]) => MethodDecorator;
 export declare const Options: (path?: string | string[]) => MethodDecorator;
 export declare const Head: (path?: string | string[]) => MethodDecorator;
 export declare const All: (path?: string | string[]) => MethodDecorator;
-export declare const Mid: (...arg: any[]) => (target: any, key: any, descriptor: PropertyDescriptor) => PropertyDescriptor;
-export declare function Filter(...arg: any[]): ClassDecorator;
+export declare const Mid: (arg: any) => (target: any, key: any, descriptor: PropertyDescriptor) => PropertyDescriptor;
+export declare function Filter(arg: any): ClassDecorator;

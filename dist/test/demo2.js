@@ -12,6 +12,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
 const http = require('http');
+function mid1() {
+    return function (req, res, next) {
+        console.log('mid1:');
+        next();
+    };
+}
+function mid2() {
+    return function (req, res, next) {
+        console.log('mid2:');
+        next();
+    };
+}
 const Router_1 = require("../src/Router");
 let Page = class Page {
     Filter(req, res) {
@@ -35,19 +47,19 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], Page.prototype, "xi1", null);
 Page = __decorate([
-    Router_1.Controller()
+    Router_1.Controller(),
+    Router_1.Filter(mid1())
 ], Page);
 let nice = new Router_1.Router(app, {
     wf: {
         cluster: "hbg_fangfe_node_fjson",
         server: "10.144.46.150:8888",
-        debug: true,
-        interval: 10 * 1000
+        debug: false,
     }
 });
 nice.use('/', Page);
 app.use(function (req, res, next) {
-    res.send('404 404');
+    res.send('404');
 });
 let server = http.createServer(app);
 server.listen(9001, () => {

@@ -16,13 +16,18 @@ class RouterProxy {
             }
             catch (e) {
                 let obj = {};
-                try {
-                    obj = JSON.parse(e + '');
+                if (e instanceof Error && e['code'] !== undefined) {
+                    obj['code'] = e['code'];
+                    obj['desc'] = e['desc'];
+                    obj['message'] = e.message;
+                    obj['stack'] = e.stack;
                 }
-                catch (e2) {
+                else {
                     obj['code'] = -100;
-                    obj['desc'] = e + '';
+                    obj['desc'] = '系统异常';
                 }
+                obj['stack'] = e.stack;
+                obj['message'] = e.message;
                 let myc = "\x1B[0;31m";
                 var time = `[${new Date().toLocaleString()}]`;
                 var msg = myc + time + '\x1B[0m ';

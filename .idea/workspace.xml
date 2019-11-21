@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Router.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Router.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/fun.decorator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/fun.decorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/fun.decorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test/demo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test/demo2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fun.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/demo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/demo2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo2.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +45,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,7 +90,8 @@
       <workItem from="1568272505486" duration="566000" />
       <workItem from="1568634220497" duration="2047000" />
       <workItem from="1570676883933" duration="883000" />
-      <workItem from="1571640356426" duration="3542000" />
+      <workItem from="1571640356426" duration="5557000" />
+      <workItem from="1574251176977" duration="4314000" />
     </task>
     <servers />
   </component>

@@ -33,13 +33,25 @@ const createMappingDecorator = (method) => {
     };
 };
 const createMidWareDecorator = () => {
-    return function (...arg) {
+    return function (arg) {
         return (target, key, descriptor) => {
             let midwareArray = Reflect.getMetadata(constants_1.MIDDLEWARE_METADATA, target);
             if (midwareArray && midwareArray instanceof Array && midwareArray.length > 0) {
-                midwareArray = midwareArray.concat(arg);
+                let _arg;
+                if (typeof arg == 'function') {
+                    _arg = [arg];
+                }
+                else if (arg instanceof Array) {
+                    _arg = arg;
+                }
+                if (_arg) {
+                    midwareArray = midwareArray.concat(_arg);
+                }
             }
-            else {
+            else if (typeof arg == 'function') {
+                midwareArray = [arg];
+            }
+            else if (arg instanceof Array) {
                 midwareArray = arg;
             }
             Reflect.defineMetadata(constants_1.MIDDLEWARE_METADATA, midwareArray, descriptor.value);
@@ -68,8 +80,11 @@ exports.Options = createMappingDecorator(request_method_enum_1.RequestMethod.OPT
 exports.Head = createMappingDecorator(request_method_enum_1.RequestMethod.HEAD);
 exports.All = createMappingDecorator(request_method_enum_1.RequestMethod.ALL);
 exports.Mid = createMidWareDecorator();
-function Filter(...arg) {
+function Filter(arg) {
     return (target) => {
+        if (typeof arg == 'function') {
+            arg = [arg];
+        }
         Reflect.defineMetadata(constants_1.FILTER_METADATA, arg, target);
     };
 }
