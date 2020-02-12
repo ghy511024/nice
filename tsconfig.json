@@ -7,13 +7,13 @@
     "noLib": false,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "target": "es2015",
     "sourceMap": false,
     "allowJs": false,
     "outDir": "./dist",
     "baseUrl": ".",
-    "importHelpers": false
+    "importHelpers": false,
+    "experimentalDecorators": true
   },
   "include": [
     "src/**/*"

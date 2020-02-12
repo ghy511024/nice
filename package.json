@@ -1,18 +1,25 @@
 {
   "name": "@fang/router",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
-    "wfmanager": "^1.1.4",
+    "@fang/flog": "0.0.4",
+    "iterare": "^1.2.0",
+    "path-to-regexp": "^6.1.0",
     "reflect-metadata": "^0.1.13",
-    "iterare": "^1.2.0"
+    "wfmanager": "1.1.5",
+    "wmonitor": "0.0.5"
   },
   "description": "a mvc router for express",
   "repository": "git@igit.58corp.com:fanglib/nice.git",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.0.12",
-    "express": "~4.15.2"
+    "@types/node": "^12.12.26",
+    "express": "~4.15.2",
+    "typescript": "^3.7.5"
   }
 }

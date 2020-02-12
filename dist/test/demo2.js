@@ -33,6 +33,10 @@ let Page = class Page {
         let { _id } = req.params;
         res.send('good id:' + _id);
     }
+    err(req, res) {
+        JSON.parse("kk");
+        res.send('err:');
+    }
 };
 __decorate([
     Router_1.Get("xixi"),
@@ -46,15 +50,27 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], Page.prototype, "xi1", null);
+__decorate([
+    Router_1.Get("err"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], Page.prototype, "err", null);
 Page = __decorate([
     Router_1.Controller(),
     Router_1.Filter(mid1())
 ], Page);
 let nice = new Router_1.Router(app, {
+    debug: true,
     wf: {
         cluster: "hbg_fangfe_node_fjson",
         server: "10.144.46.150:8888",
-        debug: false,
+    },
+    wmonitor: {
+        include: {
+            "/": 12345,
+        },
+        exclude: ['/favicon.ico', '/nice/']
     }
 });
 nice.use('/', Page);

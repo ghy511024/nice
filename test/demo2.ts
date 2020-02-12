@@ -8,6 +8,7 @@ function mid1() {
         next();
     }
 }
+
 function mid2() {
     return function (req, res, next) {
         console.log('mid2:')
@@ -30,16 +31,30 @@ class Page {
         let {_id} = req.params;
         res.send('good id:' + _id);
     }
+
+    @Get("err")
+    err(req, res) {
+
+        JSON.parse("kk")
+        res.send('err:');
+    }
 }
 
 
 let nice = new Router(app, {
+    debug: true,
     wf: {
         cluster: "hbg_fangfe_node_fjson",
         server: "10.144.46.150:8888",
-        debug: false,
         // interval: 10 * 1000
+    },
+    wmonitor: {
+        include: {
+            "/": 12345,
+        },
+        exclude: ['/favicon.ico', '/nice/']
     }
+
 });
 
 nice.use('/', Page);

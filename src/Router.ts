@@ -1,34 +1,34 @@
 import {RoutesResolver} from './derector/core/RoutesResolver';
+import {routerConfig, Config} from './Config'
 
+const pathRegexp = require('path-to-regexp')
 export {
     Controller, Get, Post, Delete, Put, Patch, Options, Head, All, Filter, Mid
-}from './fun.decorator';
+} from './fun.decorator';
+import {Layer} from './utils/Layer'
 
 
 import WFManager = require("wfmanager");
 
-interface routerConfig {
+const flog = require('@fang/flog').getLog('fang-router/Router')
+const WM = require('wmonitor');
 
-    wf?: {
-        cluster: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson
-        server?: string,  // 模拟服务器所在ip 地址 例如 "10.144.46.150:8888",
-        debug?: boolean,  // 打印日志
-        interval?: number  // 上报间隔时间 标准1分钟,调小主要是方便调试
-    }
-}
 
 export class Router {
 
     private routesResolver: RoutesResolver;
     private config: routerConfig;
     private app: any;
+    private layers: Layer[] = [];
+    private exlayers: Layer[] = [];
 
     constructor(app, config?: routerConfig) {
         this.routesResolver = new RoutesResolver(app);
-        this.config = config;
+        this.config = config||{};
+        Config.setConfig(config);
         this.app = app;
         this.initWF();
-
+        this.initWmonitor();
     }
 
     use(...handlers: any[]) {
@@ -44,6 +44,7 @@ export class Router {
         }
     }
 
+    // 加载wfmanager 插件
     private initWF() {
         this.app.use(WFManager.express());
         setTimeout(() => {
@@ -51,8 +52,68 @@ export class Router {
             if (this.config && this.config.wf) {
                 option = Object.assign(option, this.config.wf)
             }
+            option['debug'] = !!this.config.debug;
             WFManager.init(option)
         }, 100)
     }
 
+    // 加载wmonitor 插件
+    private initWmonitor() {
+        if (this.config.wmonitor?.include && typeof this.config.wmonitor?.include == 'object') {
+            for (let key in this.config.wmonitor.include) {
+                let layer = new Layer(key, {wpoint: this.config.wmonitor.include[key]});
+                this.layers.push(layer);
+            }
+
+            if (this.config.wmonitor?.exclude) {
+                for (let key of this.config.wmonitor.exclude) {
+                    let layer = new Layer(key, {wpoint: this.config.wmonitor.include[key]});
+                    this.exlayers.push(layer);
+                }
+            }
+
+            this.app.use((req, res, next) => {
+                for (let i = 0; i < this.layers.length; i++) {
+                    if (this.layers[i].match(req.url)) {
+                        let isExculde = false;
+                        for (let j = 0; j < this.exlayers.length; j++) {
+                            if (this.exlayers[j].match(req.url)) {
+                                isExculde = true;
+                            }
+                        }
+                        if (!isExculde) {
+                            if (!!this.config.debug) {
+                                flog.debug('wmonitor success', "reg:", this.layers[i].getPath(), 'url:', req.url, this.layers[i].getPoint())
+                                WM.sum(this.layers[i].getPoint(), 1)
+                            }
+                        } else {
+                            if (!!this.config.debug) {
+                                flog.debug('wmonitor success but exclude', "reg:", this.layers[i].getPath(), 'url:', req.url)
+                            }
+                        }
+                        break;
+                    }
+                }
+                next();
+            })
+        }
+    }
+}
+
+export class WMonitor {
+    static sum(value: number, count: number) {
+        WM.sum(value, count)
+    }
+
+    static average(value: number, count: number) {
+        WM.average(value, count)
+    }
+
+    static max(value: number, count: number) {
+        WM.max(value, count)
+    }
+
+    static min(value: number, count: number) {
+        WM.min(value, count)
+    }
 }

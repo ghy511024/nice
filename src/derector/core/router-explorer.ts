@@ -148,10 +148,6 @@ export class RouterExplorer {
         callback: RouterProxyCallback,
     ) {
         return this.routerProxy.createProxy(callback)
-
-        // return async (req, res, next,) => {
-        //     await callback(req, res, next);
-        // }
     }
 
 }
