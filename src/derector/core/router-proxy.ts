@@ -33,10 +33,11 @@ export class RouterProxy {
                 let msg = myc + time + '\x1B[0m '
                 flog.err(msg, e)
                 console.log(Config.getConfig())
-                if (Config.getConfig()?.wmonitor?.error && Config.getConfig()?.debug) {// 配置了错误上报
-                    flog.debug('wmonitor report system err', Config.getConfig().wmonitor.error)
+                if (Config.getConfig()?.wmonitor?.error) {// 配置了错误上报
+                    Config.getConfig()?.debug && flog.debug('wmonitor report system err', Config.getConfig().wmonitor.error)
                     WM.sum(Config.getConfig().wmonitor.error, 1)
                 }
+
                 res.status(500);
                 res.send(obj);
             }
