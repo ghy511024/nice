@@ -78,8 +78,8 @@ class Router {
                         if (!isExculde) {
                             if (!!this.config.debug) {
                                 flog.debug('wmonitor success', "reg:", this.layers[i].getPath(), 'url:', req.url, this.layers[i].getPoint());
-                                WM.sum(this.layers[i].getPoint(), 1);
                             }
+                            WM.sum(this.layers[i].getPoint(), 1);
                         }
                         else {
                             if (!!this.config.debug) {
