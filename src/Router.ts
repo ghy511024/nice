@@ -12,13 +12,13 @@ import {Layer} from './utils/Layer'
 
 
 import WFManager = require("wfmanager");
+import {BasicRouter} from './BasicRouter'
 
 const flog = require('@fang/flog').getLog('fang-router/Router')
 const WM = require('wmonitor');
-import {BasicRouter} from './BasicRouter'
+
 
 export class Router extends BasicRouter {
-
     constructor(app, config?: routerConfig) {
         super(app, config)
         this.initWF();

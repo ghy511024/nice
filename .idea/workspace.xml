@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BasicRouter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo-test/koa/DemoController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo-test/koa/HomeController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/demo-test/koa/server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Router.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Router.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/derector/core/RoutesResolver.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-explorer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/derector/core/router-explorer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/derector/core/router-method-factory.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-method-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/derector/core/router-method-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/Config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/Config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/Router.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/Router.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/RoutesResolver.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-explorer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-method-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/derector/core/RoutesResolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/RoutesResolver.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/derector/core/router-explorer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/router-explorer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/derector/core/router-method-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/router-method-factory.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +93,7 @@
       <workItem from="1581304316958" duration="22048000" />
       <workItem from="1581386776418" duration="7930000" />
       <workItem from="1581489636975" duration="5628000" />
-      <workItem from="1584869266465" duration="16315000" />
+      <workItem from="1584869266465" duration="16489000" />
     </task>
     <servers />
   </component>
@@ -195,7 +171,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Router.ts</url>
-          <line>15</line>
+          <line>16</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -207,7 +183,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Router.ts</url>
-          <line>17</line>
+          <line>18</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>

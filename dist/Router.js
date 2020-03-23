@@ -15,9 +15,9 @@ exports.Filter = fun_decorator_1.Filter;
 exports.Mid = fun_decorator_1.Mid;
 const Layer_1 = require("./utils/Layer");
 const WFManager = require("wfmanager");
+const BasicRouter_1 = require("./BasicRouter");
 const flog = require('@fang/flog').getLog('fang-router/Router');
 const WM = require('wmonitor');
-const BasicRouter_1 = require("./BasicRouter");
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
         super(app, config);
