@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const RoutesResolver_1 = require("./derector/core/RoutesResolver");
-const Config_1 = require("./Config");
 const pathRegexp = require('path-to-regexp');
 var fun_decorator_1 = require("./fun.decorator");
 exports.Controller = fun_decorator_1.Controller;
@@ -19,28 +18,13 @@ const Layer_1 = require("./utils/Layer");
 const WFManager = require("wfmanager");
 const flog = require('@fang/flog').getLog('fang-router/Router');
 const WM = require('wmonitor');
-class Router {
+const BasicRouter_1 = require("./BasicRouter");
+class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
-        this.layers = [];
-        this.exlayers = [];
+        super(app, config);
         this.routesResolver = new RoutesResolver_1.RoutesResolver(app);
-        this.config = config || {};
-        Config_1.Config.setConfig(config);
-        this.app = app;
         this.initWF();
         this.initWmonitor();
-    }
-    use(...handlers) {
-        if (handlers.length >= 1) {
-            let rootPath = '';
-            if (typeof handlers[0] == 'string') {
-                rootPath = handlers[0];
-                handlers.splice(0, 1);
-            }
-            for (var i = 0; i < handlers.length; i++) {
-                this.routesResolver.registerRouters(handlers[i], rootPath);
-            }
-        }
     }
     initWF() {
         this.app.use(WFManager.express());
@@ -78,8 +62,8 @@ class Router {
                         if (!isExculde) {
                             if (!!this.config.debug) {
                                 flog.debug('wmonitor success', "reg:", this.layers[i].getPath(), 'url:', req.url, this.layers[i].getPoint());
-                                WM.sum(this.layers[i].getPoint(), 1);
                             }
+                            WM.sum(this.layers[i].getPoint(), 1);
                         }
                         else {
                             if (!!this.config.debug) {
@@ -95,6 +79,14 @@ class Router {
     }
 }
 exports.Router = Router;
+class KoaRouter extends BasicRouter_1.BasicRouter {
+    constructor(app, koaRouter, config) {
+        super(app, config);
+        this.routesResolver = new RoutesResolver_1.RoutesResolver(koaRouter);
+        app.use(koaRouter.routes()).use(koaRouter.allowedMethods());
+    }
+}
+exports.KoaRouter = KoaRouter;
 class WMonitor {
     static sum(value, count) {
         WM.sum(value, count);

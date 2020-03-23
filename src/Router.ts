@@ -1,6 +1,9 @@
 import {RoutesResolver} from './derector/core/RoutesResolver';
 import {routerConfig, Config} from './Config'
 
+import * as koaRouter from 'koa-router';
+import * as koa from 'koa';
+
 const pathRegexp = require('path-to-regexp')
 export {
     Controller, Get, Post, Delete, Put, Patch, Options, Head, All, Filter, Mid
@@ -12,36 +15,14 @@ import WFManager = require("wfmanager");
 
 const flog = require('@fang/flog').getLog('fang-router/Router')
 const WM = require('wmonitor');
+import {BasicRouter} from './BasicRouter'
 
-
-export class Router {
-
-    private routesResolver: RoutesResolver;
-    private config: routerConfig;
-    private app: any;
-    private layers: Layer[] = [];
-    private exlayers: Layer[] = [];
+export class Router extends BasicRouter {
 
     constructor(app, config?: routerConfig) {
-        this.routesResolver = new RoutesResolver(app);
-        this.config = config||{};
-        Config.setConfig(config);
-        this.app = app;
+        super(app, config)
         this.initWF();
         this.initWmonitor();
-    }
-
-    use(...handlers: any[]) {
-        if (handlers.length >= 1) {
-            let rootPath = ''
-            if (typeof handlers[0] == 'string') {
-                rootPath = handlers[0];
-                handlers.splice(0, 1);
-            }
-            for (var i = 0; i < handlers.length; i++) {
-                this.routesResolver.registerRouters(handlers[i], rootPath)
-            }
-        }
     }
 
     // 加载wfmanager 插件
@@ -97,6 +78,13 @@ export class Router {
                 next();
             })
         }
+    }
+
+}
+
+export class KRouter extends BasicRouter {
+    constructor(app: koaRouter, config?: routerConfig) {
+        super(app, config);
     }
 }
 

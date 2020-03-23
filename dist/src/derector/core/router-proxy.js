@@ -38,8 +38,8 @@ class RouterProxy {
                 let msg = myc + time + '\x1B[0m ';
                 flog.err(msg, e);
                 console.log(Config_1.Config.getConfig());
-                if (((_b = (_a = Config_1.Config.getConfig()) === null || _a === void 0 ? void 0 : _a.wmonitor) === null || _b === void 0 ? void 0 : _b.error) && ((_c = Config_1.Config.getConfig()) === null || _c === void 0 ? void 0 : _c.debug)) {
-                    flog.debug('wmonitor report system err', Config_1.Config.getConfig().wmonitor.error);
+                if ((_b = (_a = Config_1.Config.getConfig()) === null || _a === void 0 ? void 0 : _a.wmonitor) === null || _b === void 0 ? void 0 : _b.error) {
+                    ((_c = Config_1.Config.getConfig()) === null || _c === void 0 ? void 0 : _c.debug) && flog.debug('wmonitor report system err', Config_1.Config.getConfig().wmonitor.error);
                     WM.sum(Config_1.Config.getConfig().wmonitor.error, 1);
                 }
                 res.status(500);

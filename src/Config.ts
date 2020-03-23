@@ -1,4 +1,5 @@
 export interface routerConfig {
+    isKoa?: boolean
     debug?: boolean
     wf?: {
         cluster: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson

@@ -1,4 +1,5 @@
 export interface routerConfig {
+    isKoa?: boolean;
     debug?: boolean;
     wf?: {
         cluster: string;
