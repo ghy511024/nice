@@ -21,10 +21,10 @@
   "repository": "git@igit.58corp.com:fanglib/nice.git",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^12.12.26",
+    "@types/node": "^12.12.42",
     "express": "~4.15.2",
-    "typescript": "^3.7.5",
     "koa": "^2.11.0",
-    "koa-router": "^8.0.8"
+    "koa-router": "^8.0.8",
+    "typescript": "^3.7.5"
   }
 }
