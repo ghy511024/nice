@@ -2,7 +2,7 @@ export interface routerConfig {
     isKoa?: boolean;
     debug?: boolean;
     wf?: {
-        cluster: string;
+        cluster?: string;
         server?: string;
         interval?: number;
         close?: boolean;

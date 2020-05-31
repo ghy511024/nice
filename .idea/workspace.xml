@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/demo-test/koa/DemoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/demo-test/koa/DemoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/demo-test/koa/HomeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/demo-test/koa/HomeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/BasicRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/BasicRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/Router.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/Router.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +92,7 @@
       <workItem from="1581489636975" duration="5628000" />
       <workItem from="1584869266465" duration="18686000" />
       <workItem from="1590903401842" duration="398000" />
+      <workItem from="1590903817762" duration="318000" />
     </task>
     <servers />
   </component>

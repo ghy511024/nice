@@ -2,7 +2,7 @@ export interface routerConfig {
     isKoa?: boolean
     debug?: boolean
     wf?: {
-        cluster: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson
+        cluster?: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson
         server?: string,  // 模拟服务器所在ip 地址 例如 "10.144.46.150:8888",
         interval?: number  // 上报间隔时间 标准1分钟,调小主要是方便调试
         close?:boolean
