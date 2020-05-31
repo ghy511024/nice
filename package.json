@@ -1,6 +1,6 @@
 {
   "name": "@fang/router",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
   "scripts": {
@@ -17,7 +17,7 @@
     "wfmanager": "1.1.5",
     "wmonitor": "0.0.5"
   },
-  "description": "a mvc router for express && koa ",
+  "description": "a mvc router for express && koa",
   "repository": "git@igit.58corp.com:fanglib/nice.git",
   "license": "MIT",
   "devDependencies": {

@@ -20,8 +20,11 @@ const flog = require('@fang/flog').getLog('fang-router/Router');
 const WM = require('wmonitor');
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
+        var _a;
         super(app, config);
-        this.initWF();
+        if (((_a = config === null || config === void 0 ? void 0 : config.wf) === null || _a === void 0 ? void 0 : _a.close) !== true) {
+            this.initWF();
+        }
         this.initWmonitor();
     }
     initWF() {

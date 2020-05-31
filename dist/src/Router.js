@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const RoutesResolver_1 = require("./derector/core/RoutesResolver");
 const pathRegexp = require('path-to-regexp');
 var fun_decorator_1 = require("./fun.decorator");
 exports.Controller = fun_decorator_1.Controller;
@@ -16,13 +15,12 @@ exports.Filter = fun_decorator_1.Filter;
 exports.Mid = fun_decorator_1.Mid;
 const Layer_1 = require("./utils/Layer");
 const WFManager = require("wfmanager");
+const BasicRouter_1 = require("./BasicRouter");
 const flog = require('@fang/flog').getLog('fang-router/Router');
 const WM = require('wmonitor');
-const BasicRouter_1 = require("./BasicRouter");
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
         super(app, config);
-        this.routesResolver = new RoutesResolver_1.RoutesResolver(app);
         this.initWF();
         this.initWmonitor();
     }
@@ -79,14 +77,12 @@ class Router extends BasicRouter_1.BasicRouter {
     }
 }
 exports.Router = Router;
-class KoaRouter extends BasicRouter_1.BasicRouter {
-    constructor(app, koaRouter, config) {
+class KRouter extends BasicRouter_1.BasicRouter {
+    constructor(app, config) {
         super(app, config);
-        this.routesResolver = new RoutesResolver_1.RoutesResolver(koaRouter);
-        app.use(koaRouter.routes()).use(koaRouter.allowedMethods());
     }
 }
-exports.KoaRouter = KoaRouter;
+exports.KRouter = KRouter;
 class WMonitor {
     static sum(value, count) {
         WM.sum(value, count);

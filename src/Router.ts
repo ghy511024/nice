@@ -21,7 +21,9 @@ const WM = require('wmonitor');
 export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
         super(app, config)
-        this.initWF();
+        if (config?.wf?.close !== true) {
+            this.initWF();
+        }
         this.initWmonitor();
     }
 
