@@ -5,6 +5,7 @@ export interface routerConfig {
         cluster: string;
         server?: string;
         interval?: number;
+        close?: boolean;
     };
     wmonitor?: {
         include: {
