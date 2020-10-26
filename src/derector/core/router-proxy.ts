@@ -22,9 +22,7 @@ export class RouterProxy {
                     obj['code'] = -100
                     obj['desc'] = '系统异常';
                 }
-                obj['stack'] = e.stack;
-                obj['message'] = e.message;
-
+                obj["err"] = e;
                 let myc = "\x1B[0;31m"
                 var time = `[${new Date().toLocaleString()}]`;
                 var msg = myc + time + '\x1B[0m '

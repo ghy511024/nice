@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/aa1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/demo3.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/encode/aa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/encode/jj.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/jjencode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/jjencode2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/o.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Router.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Router.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/fun.decorator.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fun.decorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/fun.decorator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/derector/core/router-proxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/fun.decorator.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/fun.decorator.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/fun.decorator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test/demo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test/demo2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fun.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/fun.decorator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/demo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/demo2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/demo2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/derector/core/router-proxy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/router-proxy.ts" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -37,7 +35,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -48,24 +52,38 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\develop\workespace\58git_public\nice" />
-      <recent name="E:\develop\workespace\58git_public\nice\src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\develop\workespace\58git_public\nice\test" />
       <recent name="E:\develop\workespace\58git_public\nice" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\develop\workespace\58git_public\nice" />
+      <recent name="E:\develop\workespace\58git_public\nice\src" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager" selected="Node.js.jjencode.js">
+    <configuration name="jjencode2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/jjencode2.js" working-dir="$PROJECT_DIR$/test">
+      <method v="2" />
+    </configuration>
+    <configuration name="jjencode.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/jjencode.js" working-dir="$PROJECT_DIR$/test">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Node.js.jjencode.js" />
+        <item itemvalue="Node.js.jjencode2.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -91,7 +109,24 @@
       <workItem from="1568634220497" duration="2047000" />
       <workItem from="1570676883933" duration="883000" />
       <workItem from="1571640356426" duration="5557000" />
-      <workItem from="1574251176977" duration="4314000" />
+      <workItem from="1574251176977" duration="5201000" />
+      <workItem from="1574329975452" duration="4425000" />
+      <workItem from="1574763446478" duration="738000" />
+      <workItem from="1576641363744" duration="1824000" />
+      <workItem from="1576647292517" duration="599000" />
+      <workItem from="1576732384980" duration="598000" />
+      <workItem from="1577247357581" duration="13152000" />
+      <workItem from="1577331191498" duration="597000" />
+      <workItem from="1577353656876" duration="1627000" />
+      <workItem from="1577431782350" duration="1935000" />
+      <workItem from="1577674030112" duration="138000" />
+      <workItem from="1578461426752" duration="61000" />
+      <workItem from="1578644775849" duration="606000" />
+      <workItem from="1593330702229" duration="1273000" />
+      <workItem from="1594104393141" duration="4668000" />
+      <workItem from="1594975532583" duration="1758000" />
+      <workItem from="1600072605020" duration="1600000" />
+      <workItem from="1603697700484" duration="97000" />
     </task>
     <servers />
   </component>
@@ -117,5 +152,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="917" y="234" key="FileChooserDialogImpl" timestamp="1594195899479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="917" y="234" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1594195899479" />
+    <state x="2722" y="516" width="626" height="490" key="find.popup" timestamp="1594976071054">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2722" y="516" width="626" height="490" key="find.popup/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1594976071054" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/fun.decorator.ts</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
