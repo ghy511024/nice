@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShutdownSignal = void 0;
 var ShutdownSignal;
 (function (ShutdownSignal) {
     ShutdownSignal["SIGHUP"] = "SIGHUP";

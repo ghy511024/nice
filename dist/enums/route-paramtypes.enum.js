@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteParamtypes = void 0;
 var RouteParamtypes;
 (function (RouteParamtypes) {
     RouteParamtypes[RouteParamtypes["REQUEST"] = 0] = "REQUEST";

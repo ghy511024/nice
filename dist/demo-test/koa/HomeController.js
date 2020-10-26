@@ -17,8 +17,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HomeController = void 0;
 const fun_decorator_1 = require("../../fun.decorator");
 const koa = require("koa");
 function mid1(ctx, next) {
@@ -53,14 +53,14 @@ __decorate([
     fun_decorator_1.Get("/data"),
     fun_decorator_1.Mid([mid2, mid3]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_a = typeof koa !== "undefined" && koa.Context) === "function" ? _a : Object]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], HomeController.prototype, "data", null);
 __decorate([
     fun_decorator_1.Get("/test"),
     fun_decorator_1.Mid(mid1),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [typeof (_b = typeof koa !== "undefined" && koa.Context) === "function" ? _b : Object]),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], HomeController.prototype, "test", null);
 HomeController = __decorate([

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetadataScanner = void 0;
 const shared_utils_1 = require("../../utils/shared.utils");
 const iterare_1 = require("iterare");
 class MetadataScanner {

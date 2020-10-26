@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BasicRouter = void 0;
 const RoutesResolver_1 = require("./derector/core/RoutesResolver");
 const Config_1 = require("./Config");
 class BasicRouter {

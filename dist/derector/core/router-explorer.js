@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouterExplorer = void 0;
 require("reflect-metadata");
 const constants_1 = require("../constants");
 const router_proxy_1 = require("./router-proxy");

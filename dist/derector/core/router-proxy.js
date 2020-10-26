@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouterProxy = void 0;
 const flog = require('@fang/flog').getLog('RouterProxy');
 const WM = require('wmonitor');
 const Config_1 = require("../../Config");

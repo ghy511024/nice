@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouterMethodFactory = void 0;
 const request_method_enum_1 = require("../../enums/request-method.enum");
 class RouterMethodFactory {
     get(target, requestMethod) {

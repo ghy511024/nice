@@ -4,7 +4,8 @@
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "pub": "npm publish --registry http://ires.58corp.com/repository/npm/"
   },
   "dependencies": {
     "@fang/flog": "0.0.4",

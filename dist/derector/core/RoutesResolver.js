@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoutesResolver = void 0;
 const router_explorer_1 = require("./router-explorer");
 const metadata_scanner_1 = require("./metadata-scanner");
 const constants_1 = require("../constants");

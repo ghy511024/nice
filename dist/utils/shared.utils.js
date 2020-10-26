@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.cleanUrl = exports.isSymbol = exports.isEmpty = exports.isNil = exports.isConstructor = exports.isString = exports.isFunction = exports.validatePath = exports.isObject = exports.isUndefined = void 0;
 exports.isUndefined = (obj) => typeof obj === 'undefined';
 exports.isObject = (fn) => !exports.isNil(fn) && typeof fn === 'object';
 exports.validatePath = (path) => path ? (path.charAt(0) !== '/' ? '/' + path : path) : '';

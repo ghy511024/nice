@@ -1,18 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.WMonitor = exports.KRouter = exports.Router = void 0;
 const pathRegexp = require('path-to-regexp');
 var fun_decorator_1 = require("./fun.decorator");
-exports.Controller = fun_decorator_1.Controller;
-exports.Get = fun_decorator_1.Get;
-exports.Post = fun_decorator_1.Post;
-exports.Delete = fun_decorator_1.Delete;
-exports.Put = fun_decorator_1.Put;
-exports.Patch = fun_decorator_1.Patch;
-exports.Options = fun_decorator_1.Options;
-exports.Head = fun_decorator_1.Head;
-exports.All = fun_decorator_1.All;
-exports.Filter = fun_decorator_1.Filter;
-exports.Mid = fun_decorator_1.Mid;
+Object.defineProperty(exports, "Controller", { enumerable: true, get: function () { return fun_decorator_1.Controller; } });
+Object.defineProperty(exports, "Get", { enumerable: true, get: function () { return fun_decorator_1.Get; } });
+Object.defineProperty(exports, "Post", { enumerable: true, get: function () { return fun_decorator_1.Post; } });
+Object.defineProperty(exports, "Delete", { enumerable: true, get: function () { return fun_decorator_1.Delete; } });
+Object.defineProperty(exports, "Put", { enumerable: true, get: function () { return fun_decorator_1.Put; } });
+Object.defineProperty(exports, "Patch", { enumerable: true, get: function () { return fun_decorator_1.Patch; } });
+Object.defineProperty(exports, "Options", { enumerable: true, get: function () { return fun_decorator_1.Options; } });
+Object.defineProperty(exports, "Head", { enumerable: true, get: function () { return fun_decorator_1.Head; } });
+Object.defineProperty(exports, "All", { enumerable: true, get: function () { return fun_decorator_1.All; } });
+Object.defineProperty(exports, "Filter", { enumerable: true, get: function () { return fun_decorator_1.Filter; } });
+Object.defineProperty(exports, "Mid", { enumerable: true, get: function () { return fun_decorator_1.Mid; } });
 const Layer_1 = require("./utils/Layer");
 const WFManager = require("wfmanager");
 const BasicRouter_1 = require("./BasicRouter");
@@ -20,9 +21,9 @@ const flog = require('@fang/flog').getLog('fang-router/Router');
 const WM = require('wmonitor');
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
-        var _a, _b;
+        var _a;
         super(app, config);
-        if (((_b = (_a = config) === null || _a === void 0 ? void 0 : _a.wf) === null || _b === void 0 ? void 0 : _b.close) !== true) {
+        if (((_a = config === null || config === void 0 ? void 0 : config.wf) === null || _a === void 0 ? void 0 : _a.close) !== true) {
             this.initWF();
         }
         this.initWmonitor();

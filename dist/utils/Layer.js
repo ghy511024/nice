@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Layer = void 0;
 const { pathToRegexp, match, parse, compile } = require("path-to-regexp");
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 class Layer {
