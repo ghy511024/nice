@@ -1,17 +1,18 @@
+import { routerConfig } from './Config';
+import * as koaRouter from 'koa-router';
 export { Controller, Get, Post, Delete, Put, Patch, Options, Head, All, Filter, Mid } from './fun.decorator';
-interface routerConfig {
-    wf?: {
-        cluster: string;
-        server?: string;
-        debug?: boolean;
-        interval?: number;
-    };
-}
-export declare class Router {
-    private routesResolver;
-    private config;
-    private app;
+import { BasicRouter } from './BasicRouter';
+export declare class Router extends BasicRouter {
     constructor(app: any, config?: routerConfig);
-    use(...handlers: any[]): void;
     private initWF;
+    private initWmonitor;
+}
+export declare class KRouter extends BasicRouter {
+    constructor(app: koaRouter, config?: routerConfig);
+}
+export declare class WMonitor {
+    static sum(value: number, count: number): void;
+    static average(value: number, count: number): void;
+    static max(value: number, count: number): void;
+    static min(value: number, count: number): void;
 }

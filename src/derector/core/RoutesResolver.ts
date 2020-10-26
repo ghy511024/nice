@@ -1,11 +1,13 @@
 import {RouterExplorer} from './router-explorer';
 import {MetadataScanner} from "./metadata-scanner";
 import {FILTER_METADATA} from '../constants';
+import * as koaRouter from 'koa-router';
 
 export class RoutesResolver {
 
     private routerBuilder: RouterExplorer;
     private applicationRef: any;
+    private koaRouter: koaRouter;
     private metadataScanner: MetadataScanner;
 
     constructor(applicationRef) {

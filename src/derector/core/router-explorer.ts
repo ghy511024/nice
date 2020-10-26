@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import {METHOD_METADATA, PATH_METADATA, MIDDLEWARE_METADATA} from '../constants';
 import {RequestMethod} from '../../enums/request-method.enum';
-import {RouterProxyCallback,RouterProxy} from './router-proxy';
+import {RouterProxyCallback, RouterProxy} from './router-proxy';
 import {Controller} from '../../interfaces/controller.interface';
 import {Type} from '../../interfaces/type.interface';
 import {isString, isUndefined, validatePath, cleanUrl} from '../../utils/shared.utils';
@@ -23,7 +23,7 @@ export class RouterExplorer {
     private readonly exceptionFiltersCache = new WeakMap();
     private applicationRef: any;
     private allPaths: string[] = [];
-    private routerProxy=new RouterProxy()
+    private routerProxy = new RouterProxy()
 
     constructor(private readonly metadataScanner: MetadataScanner, applicationRef) {
         this.applicationRef = applicationRef;
@@ -78,7 +78,12 @@ export class RouterExplorer {
             const fullPath = cleanUrl(basePath) + path;
             this.allPaths.push(cleanUrl(fullPath) || '/')
             if (all_filter.length > 0) {
-                routerMethod(cleanUrl(fullPath) || '/', all_filter, proxy);
+                let tmpArray = []
+                tmpArray.push(cleanUrl(fullPath) || '/')
+                tmpArray = tmpArray.concat(all_filter)
+                tmpArray.push(proxy)
+                routerMethod.apply(this, tmpArray)
+                // routerMethod(cleanUrl(fullPath) || '/', all_filter[0], proxy);
             } else {
                 routerMethod(cleanUrl(fullPath) || '/', proxy);
             }
@@ -148,10 +153,6 @@ export class RouterExplorer {
         callback: RouterProxyCallback,
     ) {
         return this.routerProxy.createProxy(callback)
-
-        // return async (req, res, next,) => {
-        //     await callback(req, res, next);
-        // }
     }
 
 }

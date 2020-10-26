@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="001779e0-38be-4ca5-8e17-faacaca7481f" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/test/aa1.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/demo3.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/encode/aa.js" afterDir="false" />
@@ -14,6 +15,9 @@
       <change beforePath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src/derector/core/router-proxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/derector/core/router-proxy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/derector/core/router-proxy.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/Config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config.ts" afterDir="false" />
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +41,10 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+<<<<<<< HEAD
     <option name="showExcludedFiles" value="true" />
+=======
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -49,10 +56,22 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\develop\workspace\58git_public\nice\src\demo-test" />
+      <recent name="E:\develop\workspace\58git_node\nice\src" />
+      <recent name="E:\develop\workespace\58git_public\nice" />
+      <recent name="E:\develop\workespace\58git_public\nice\src" />
+    </key>
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\develop\workspace\58git_public\nice\src" />
+      <recent name="E:\develop\workspace\58git_public\nice\src\demo-test\koa" />
+      <recent name="E:\develop\workspace\58git_node\nice\src\utils" />
       <recent name="E:\develop\workespace\58git_public\nice\test" />
       <recent name="E:\develop\workespace\58git_public\nice" />
     </key>
@@ -61,15 +80,21 @@
       <recent name="E:\develop\workespace\58git_public\nice\src" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Node.js.jjencode.js">
     <configuration name="jjencode2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/jjencode2.js" working-dir="$PROJECT_DIR$/test">
       <method v="2" />
     </configuration>
     <configuration name="jjencode.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/test/jjencode.js" working-dir="$PROJECT_DIR$/test">
+=======
+  <component name="RunManager">
+    <configuration name="demo2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dist/test/demo2.js" working-dir="$PROJECT_DIR$/dist/test">
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Node.js.jjencode.js" />
         <item itemvalue="Node.js.jjencode2.js" />
       </list>
@@ -84,8 +109,11 @@
             <select />
           </treeState>
         </serviceView>
+=======
+        <item itemvalue="Node.js.demo2.js" />
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -109,6 +137,7 @@
       <workItem from="1568634220497" duration="2047000" />
       <workItem from="1570676883933" duration="883000" />
       <workItem from="1571640356426" duration="5557000" />
+<<<<<<< HEAD
       <workItem from="1574251176977" duration="5201000" />
       <workItem from="1574329975452" duration="4425000" />
       <workItem from="1574763446478" duration="738000" />
@@ -127,31 +156,98 @@
       <workItem from="1594975532583" duration="1758000" />
       <workItem from="1600072605020" duration="1600000" />
       <workItem from="1603697700484" duration="97000" />
+=======
+      <workItem from="1574251176977" duration="4314000" />
+      <workItem from="1581304316958" duration="22048000" />
+      <workItem from="1581386776418" duration="7930000" />
+      <workItem from="1581489636975" duration="5628000" />
+      <workItem from="1584869266465" duration="18686000" />
+      <workItem from="1590903401842" duration="398000" />
+      <workItem from="1590903817762" duration="318000" />
+>>>>>>> 3566b22ba7a7532fcf1a001226e4b768b7b7ba84
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../wfmanager/jest/utils/gzip.spec.js" />
-        <option value="$PROJECT_DIR$/../wfmanager/src/utils/Gzip.js" />
-        <option value="$PROJECT_DIR$/../../58git_node/f-node-zf-common/src/routes/router.js" />
-      </list>
-    </option>
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="802" y="257" key="FileChooserDialogImpl" timestamp="1584870163837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="802" y="257" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584870163837" />
+    <state width="1363" height="221" key="GridCell.Tab.0.bottom" timestamp="1584951572129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1363" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584951572129" />
+    <state width="1363" height="221" key="GridCell.Tab.0.center" timestamp="1584951572129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1363" height="221" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584951572129" />
+    <state width="1363" height="221" key="GridCell.Tab.0.left" timestamp="1584951572129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1363" height="221" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584951572129" />
+    <state width="1363" height="221" key="GridCell.Tab.0.right" timestamp="1584951572129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1363" height="221" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584951572129" />
+    <state x="334" y="148" key="SettingsEditor" timestamp="1590903416592">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="148" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590903416592" />
+    <state x="505" y="283" width="626" height="490" key="find.popup" timestamp="1584872054013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="505" y="283" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584872054013" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/derector/core/router-proxy.ts</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@types/koa/index.d.ts</url>
+          <line>439</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/fun.decorator.ts</url>
+          <line>49</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Router.ts</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Router.ts</url>
+          <line>71</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Router.ts</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="WindowStateProjectService">
     <state x="917" y="234" key="FileChooserDialogImpl" timestamp="1594195899479">

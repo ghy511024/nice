@@ -46,7 +46,11 @@ class RouterExplorer {
             const fullPath = shared_utils_1.cleanUrl(basePath) + path;
             this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
             if (all_filter.length > 0) {
-                routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', all_filter, proxy);
+                let tmpArray = [];
+                tmpArray.push(shared_utils_1.cleanUrl(fullPath) || '/');
+                tmpArray = tmpArray.concat(all_filter);
+                tmpArray.push(proxy);
+                routerMethod.apply(this, tmpArray);
             }
             else {
                 routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', proxy);

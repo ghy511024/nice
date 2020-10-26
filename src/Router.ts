@@ -1,49 +1,33 @@
 import {RoutesResolver} from './derector/core/RoutesResolver';
+import {routerConfig, Config} from './Config'
 
+import * as koaRouter from 'koa-router';
+import * as koa from 'koa';
+
+const pathRegexp = require('path-to-regexp')
 export {
     Controller, Get, Post, Delete, Put, Patch, Options, Head, All, Filter, Mid
-}from './fun.decorator';
+} from './fun.decorator';
+import {Layer} from './utils/Layer'
 
 
 import WFManager = require("wfmanager");
+import {BasicRouter} from './BasicRouter'
 
-interface routerConfig {
+const flog = require('@fang/flog').getLog('fang-router/Router')
+const WM = require('wmonitor');
 
-    wf?: {
-        cluster: string,  // 模拟服务所在集群名  例如 hbg_fangfe_node_fjson
-        server?: string,  // 模拟服务器所在ip 地址 例如 "10.144.46.150:8888",
-        debug?: boolean,  // 打印日志
-        interval?: number  // 上报间隔时间 标准1分钟,调小主要是方便调试
-    }
-}
 
-export class Router {
-
-    private routesResolver: RoutesResolver;
-    private config: routerConfig;
-    private app: any;
-
+export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
-        this.routesResolver = new RoutesResolver(app);
-        this.config = config;
-        this.app = app;
-        this.initWF();
-
-    }
-
-    use(...handlers: any[]) {
-        if (handlers.length >= 1) {
-            let rootPath = ''
-            if (typeof handlers[0] == 'string') {
-                rootPath = handlers[0];
-                handlers.splice(0, 1);
-            }
-            for (var i = 0; i < handlers.length; i++) {
-                this.routesResolver.registerRouters(handlers[i], rootPath)
-            }
+        super(app, config)
+        if (config?.wf?.close !== true) {
+            this.initWF();
         }
+        this.initWmonitor();
     }
 
+    // 加载wfmanager 插件
     private initWF() {
         this.app.use(WFManager.express());
         setTimeout(() => {
@@ -51,8 +35,75 @@ export class Router {
             if (this.config && this.config.wf) {
                 option = Object.assign(option, this.config.wf)
             }
+            option['debug'] = !!this.config.debug;
             WFManager.init(option)
         }, 100)
     }
 
+    // 加载wmonitor 插件
+    private initWmonitor() {
+        if (this.config.wmonitor?.include && typeof this.config.wmonitor?.include == 'object') {
+            for (let key in this.config.wmonitor.include) {
+                let layer = new Layer(key, {wpoint: this.config.wmonitor.include[key]});
+                this.layers.push(layer);
+            }
+
+            if (this.config.wmonitor?.exclude) {
+                for (let key of this.config.wmonitor.exclude) {
+                    let layer = new Layer(key, {wpoint: this.config.wmonitor.include[key]});
+                    this.exlayers.push(layer);
+                }
+            }
+
+            this.app.use((req, res, next) => {
+                for (let i = 0; i < this.layers.length; i++) {
+                    if (this.layers[i].match(req.url)) {
+                        let isExculde = false;
+                        for (let j = 0; j < this.exlayers.length; j++) {
+                            if (this.exlayers[j].match(req.url)) {
+                                isExculde = true;
+                            }
+                        }
+                        if (!isExculde) {
+                            if (!!this.config.debug) {
+                                flog.debug('wmonitor success', "reg:", this.layers[i].getPath(), 'url:', req.url, this.layers[i].getPoint())
+                            }
+                            WM.sum(this.layers[i].getPoint(), 1)
+                        } else {
+                            if (!!this.config.debug) {
+                                flog.debug('wmonitor success but exclude', "reg:", this.layers[i].getPath(), 'url:', req.url)
+                            }
+                        }
+                        break;
+                    }
+                }
+                next();
+            })
+        }
+    }
+
+}
+
+export class KRouter extends BasicRouter {
+    constructor(app: koaRouter, config?: routerConfig) {
+        super(app, config);
+    }
+}
+
+export class WMonitor {
+    static sum(value: number, count: number) {
+        WM.sum(value, count)
+    }
+
+    static average(value: number, count: number) {
+        WM.average(value, count)
+    }
+
+    static max(value: number, count: number) {
+        WM.max(value, count)
+    }
+
+    static min(value: number, count: number) {
+        WM.min(value, count)
+    }
 }
