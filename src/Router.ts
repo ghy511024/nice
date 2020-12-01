@@ -22,7 +22,7 @@ export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
         super(app, config)
         if (config?.wf?.close !== true) {
-            this.initWF();
+            // this.initWF();
         }
         this.initWmonitor();
     }
