@@ -6,6 +6,7 @@ export interface routerConfig {
         server?: string;
         interval?: number;
         close?: boolean;
+        open?: boolean;
     };
     wmonitor?: {
         include: {
