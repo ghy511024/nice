@@ -1,7 +1,7 @@
 export type RouterProxyCallback = <TRequest, TResponse>(
     req?: TRequest,
     res?: TResponse,
-    next?: () => void,
+    next?: (err?, req?, res?, next?) => void,
 ) => void;
 const flog = require('@fang/flog').getLog('RouterProxy')
 const WM = require('wmonitor');
@@ -11,7 +11,7 @@ export class RouterProxy {
     public createProxy(
         targetCallback: RouterProxyCallback,
     ) {
-        return async <TRequest, TResponse>(req: TRequest, res, next: () => void,) => {
+        return async <TRequest, TResponse>(req: TRequest, res, next: (err, req, res, next) => void,) => {
             try {
                 await targetCallback(req, res, next);
             } catch (e) {
@@ -29,15 +29,12 @@ export class RouterProxy {
                 let myc = "\x1B[0;31m"
                 let time = `[${new Date().toLocaleString()}]`;
                 let msg = myc + time + '\x1B[0m '
-                flog.err(msg, e)
-                console.log(Config.getConfig())
+                // flog.err(msg, e)
                 if (Config.getConfig()?.wmonitor?.error) {// 配置了错误上报
                     Config.getConfig()?.debug && flog.debug('wmonitor report system err', Config.getConfig().wmonitor.error)
                     WM.sum(Config.getConfig().wmonitor.error, 1)
                 }
-
-                res.status(500);
-                res.send(obj);
+                return next(e, req, res, next);
             }
         };
     }
