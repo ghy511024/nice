@@ -13,8 +13,9 @@ import {Layer} from './utils/Layer'
 
 import WFManager = require("wfmanager");
 import {BasicRouter} from './BasicRouter'
+import {Flog} from "./Log/FLog";
 
-const flog = require('@fang/flog').getLog('fang-router/Router')
+const flog = new Flog('fang-router/Router')
 const WM = require('wmonitor');
 
 
@@ -107,3 +108,6 @@ export class WMonitor {
         WM.min(value, count)
     }
 }
+
+
+export {Flog}

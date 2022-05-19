@@ -8,36 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HomeController = void 0;
 const fun_decorator_1 = require("../../fun.decorator");
 const koa = require("koa");
-function mid1(ctx, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log('hehe');
-        yield next();
-    });
+async function mid1(ctx, next) {
+    console.log('hehe');
+    await next();
 }
-function mid2(ctx, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log('yoyo');
-        yield next();
-    });
+async function mid2(ctx, next) {
+    console.log('yoyo');
+    await next();
 }
-function mid3(ctx, next) {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log('yoy3');
-        yield next();
-    });
+async function mid3(ctx, next) {
+    console.log('yoy3');
+    await next();
 }
 let HomeController = class HomeController {
     data(ctx) {
