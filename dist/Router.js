@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WMonitor = exports.KRouter = exports.Router = void 0;
+exports.Flog = exports.WMonitor = exports.KRouter = exports.Router = void 0;
 const pathRegexp = require('path-to-regexp');
 var fun_decorator_1 = require("./fun.decorator");
 Object.defineProperty(exports, "Controller", { enumerable: true, get: function () { return fun_decorator_1.Controller; } });
@@ -17,7 +17,9 @@ Object.defineProperty(exports, "Mid", { enumerable: true, get: function () { ret
 const Layer_1 = require("./utils/Layer");
 const WFManager = require("wfmanager");
 const BasicRouter_1 = require("./BasicRouter");
-const flog = require('@fang/flog').getLog('fang-router/Router');
+const FLog_1 = require("./Log/FLog");
+Object.defineProperty(exports, "Flog", { enumerable: true, get: function () { return FLog_1.Flog; } });
+const flog = new FLog_1.Flog('fang-router/Router');
 const WM = require('wmonitor');
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {

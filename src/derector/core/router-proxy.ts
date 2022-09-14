@@ -3,7 +3,10 @@ export type RouterProxyCallback = <TRequest, TResponse>(
     res?: TResponse,
     next?: (err?, req?, res?, next?) => void,
 ) => void;
-const flog = require('@fang/flog').getLog('RouterProxy')
+import {Flog} from "../../Log/FLog";
+
+const flog = new Flog('fang-router/RouterProxy')
+
 const WM = require('wmonitor');
 import {Config} from '../../Config';
 
