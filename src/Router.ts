@@ -17,7 +17,6 @@ import {BasicRouter} from './BasicRouter'
 const flog = require('@fang/flog').getLog('fang-router/Router')
 const WM = require('wmonitor');
 
-
 export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
         super(app, config)
