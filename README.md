@@ -46,7 +46,7 @@ export class ListController {
 ```
 
 * Router.ts
-```shell
+```ts
 import {Router} from '@fang/router';
 import {ListController} from '../controller/ListController';
 export const useRouter = function (app) {
@@ -57,7 +57,7 @@ export const useRouter = function (app) {
 ```
 
 * server.ts
-```shell
+```ts
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -74,7 +74,7 @@ server.listen(8001, () => {
 ### 使用中间件
 
 * server.ts
-```shell
+```ts
 import {Controller, Get, Mid} from "@fang/router";
 import {Request, Response} from 'express';
 import {ICP_Express, FeCommon} from "@fang/icp"
@@ -93,3 +93,15 @@ export class MidServiceController {
     }
 }
 ```
+
+### xss 修复
+
+```ts
+import {Router} from '@fang/router';
+import {ListController} from '../controller/ListController';
+export const useRouter = function (app) {
+    const router = new Router(app,{xssFix:true});
+    router.use('/list', ListController)
+};
+```
+
