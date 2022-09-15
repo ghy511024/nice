@@ -1,6 +1,7 @@
 export interface routerConfig {
     isKoa?: boolean;
     debug?: boolean;
+    xssFix?: boolean;
     wf?: {
         cluster?: string;
         server?: string;

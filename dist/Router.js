@@ -19,16 +19,22 @@ const WFManager = require("wfmanager");
 const BasicRouter_1 = require("./BasicRouter");
 const FLog_1 = require("./Log/FLog");
 Object.defineProperty(exports, "Flog", { enumerable: true, get: function () { return FLog_1.Flog; } });
+const XSS_1 = require("./utils/XSS");
 const flog = new FLog_1.Flog('fang-router/Router');
 const WM = require('wmonitor');
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
         var _a;
         super(app, config);
+        if (config === null || config === void 0 ? void 0 : config.xssFix) {
+            this.initXSSFix();
+        }
         if (((_a = config === null || config === void 0 ? void 0 : config.wf) === null || _a === void 0 ? void 0 : _a.open) === true) {
             this.initWF();
         }
-        this.initWmonitor();
+        if (config.wmonitor) {
+            this.initWMonitor();
+        }
     }
     initWF() {
         this.app.use(WFManager.express());
@@ -41,7 +47,7 @@ class Router extends BasicRouter_1.BasicRouter {
             WFManager.init(option);
         }, 100);
     }
-    initWmonitor() {
+    initWMonitor() {
         var _a, _b, _c;
         if (((_a = this.config.wmonitor) === null || _a === void 0 ? void 0 : _a.include) && typeof ((_b = this.config.wmonitor) === null || _b === void 0 ? void 0 : _b.include) == 'object') {
             for (let key in this.config.wmonitor.include) {
@@ -80,6 +86,12 @@ class Router extends BasicRouter_1.BasicRouter {
                 next();
             });
         }
+    }
+    initXSSFix() {
+        this.app.use((req, res, next) => {
+            XSS_1.XSSFix.fixXss(req);
+            next();
+        });
     }
 }
 exports.Router = Router;

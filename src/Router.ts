@@ -14,6 +14,7 @@ import {Layer} from './utils/Layer'
 import WFManager = require("wfmanager");
 import {BasicRouter} from './BasicRouter'
 import {Flog} from "./Log/FLog";
+import {XSSFix} from "./utils/XSS";
 
 const flog = new Flog('fang-router/Router')
 const WM = require('wmonitor');
@@ -21,10 +22,15 @@ const WM = require('wmonitor');
 export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
         super(app, config)
+        if (config?.xssFix) {
+            this.initXSSFix()
+        }
         if (config?.wf?.open === true) {
             this.initWF();
         }
-        this.initWmonitor();
+        if (config.wmonitor) {
+            this.initWMonitor();
+        }
     }
 
     // 加载wfmanager 插件
@@ -41,7 +47,7 @@ export class Router extends BasicRouter {
     }
 
     // 加载wmonitor 插件
-    private initWmonitor() {
+    private initWMonitor() {
         if (this.config.wmonitor?.include && typeof this.config.wmonitor?.include == 'object') {
             for (let key in this.config.wmonitor.include) {
                 let layer = new Layer(key, {wpoint: this.config.wmonitor.include[key]});
@@ -80,6 +86,14 @@ export class Router extends BasicRouter {
                 next();
             })
         }
+    }
+
+    // 修复xss 漏洞
+    private initXSSFix() {
+        this.app.use((req, res, next) => {
+            XSSFix.fixXss(req);
+            next()
+        });
     }
 
 }

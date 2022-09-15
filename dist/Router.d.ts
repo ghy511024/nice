@@ -6,7 +6,8 @@ import { Flog } from "./Log/FLog";
 export declare class Router extends BasicRouter {
     constructor(app: any, config?: routerConfig);
     private initWF;
-    private initWmonitor;
+    private initWMonitor;
+    private initXSSFix;
 }
 export declare class KRouter extends BasicRouter {
     constructor(app: koaRouter, config?: routerConfig);
