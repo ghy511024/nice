@@ -21,7 +21,7 @@ const FLog_1 = require("./Log/FLog");
 Object.defineProperty(exports, "Flog", { enumerable: true, get: function () { return FLog_1.Flog; } });
 const XSS_1 = require("./utils/XSS");
 const flog = new FLog_1.Flog('fang-router/Router');
-const WM = require('wmonitor');
+const WM = require('@wb/wmonitor');
 class Router extends BasicRouter_1.BasicRouter {
     constructor(app, config) {
         var _a;

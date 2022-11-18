@@ -17,7 +17,7 @@ import {Flog} from "./Log/FLog";
 import {XSSFix} from "./utils/XSS";
 
 const flog = new Flog('fang-router/Router')
-const WM = require('wmonitor');
+const WM = require('@wb/wmonitor');
 
 export class Router extends BasicRouter {
     constructor(app, config?: routerConfig) {
