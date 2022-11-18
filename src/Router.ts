@@ -28,7 +28,7 @@ export class Router extends BasicRouter {
         if (config?.wf?.open === true) {
             this.initWF();
         }
-        if (config.wmonitor) {
+        if (config?.wmonitor) {
             this.initWMonitor();
         }
     }
