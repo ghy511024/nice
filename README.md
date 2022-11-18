@@ -27,7 +27,7 @@ src
 * ListController.ts
 
 ```ts
-import {Controller, Get, Post} from '@fang/router';
+import {Controller, Get, Post} from '@wb/nice';
 
 @Controller('/')
 export class ListController {
@@ -47,7 +47,7 @@ export class ListController {
 
 * Router.ts
 ```ts
-import {Router} from '@fang/router';
+import {Router} from '@wb/nice';
 import {ListController} from '../controller/ListController';
 export const useRouter = function (app) {
     const router = new Router(app);
@@ -75,7 +75,7 @@ server.listen(8001, () => {
 
 * server.ts
 ```ts
-import {Controller, Get, Mid} from "@fang/router";
+import {Controller, Get, Mid} from "@wb/nice";
 import {Request, Response} from 'express';
 import {ICP_Express, FeCommon} from "@fang/icp"
 
@@ -97,7 +97,7 @@ export class MidServiceController {
 ### xss 修复
 
 ```ts
-import {Router} from '@fang/router';
+import {Router} from '@wb/nice';
 import {ListController} from '../controller/ListController';
 export const useRouter = function (app) {
     const router = new Router(app,{xssFix:true});
