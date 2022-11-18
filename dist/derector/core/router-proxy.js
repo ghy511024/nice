@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RouterProxy = void 0;
 const FLog_1 = require("../../Log/FLog");
 const flog = new FLog_1.Flog('fang-router/RouterProxy');
-const WM = require('wmonitor');
+const WM = require('@wb/wmonitor');
 const Config_1 = require("../../Config");
 class RouterProxy {
     createProxy(targetCallback) {

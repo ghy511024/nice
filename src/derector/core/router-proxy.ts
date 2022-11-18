@@ -7,7 +7,7 @@ import {Flog} from "../../Log/FLog";
 
 const flog = new Flog('fang-router/RouterProxy')
 
-const WM = require('wmonitor');
+const WM = require('@wb/wmonitor');
 import {Config} from '../../Config';
 
 export class RouterProxy {
