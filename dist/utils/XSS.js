@@ -21,8 +21,7 @@ class XSSFix {
                 }
             }
         }
-        catch (e) {
-        }
+        catch (e) { }
     }
 }
 exports.XSSFix = XSSFix;

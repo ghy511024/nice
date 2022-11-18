@@ -21,9 +21,6 @@ export class XSSFix {
                     }
                 }
             }
-        }catch (e) {
-
-        }
-
+        }catch (e) {}
     }
 }

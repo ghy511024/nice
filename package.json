@@ -1,6 +1,6 @@
 {
   "name": "@wb/nice",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
     "path-to-regexp": "^6.1.0",
     "reflect-metadata": "^0.1.13",
     "wfmanager": "1.1.5",
-    "wmonitor": "0.0.5"
+    "@wb/wmonitor": "0.0.6"
   },
   "description": "a mvc router for express && koa",
   "repository": "git@igit.58corp.com:fanglib/nice.git",
