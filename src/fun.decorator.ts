@@ -23,7 +23,13 @@ const defaultMetadata = {
 export const RequestMapping = (metadata: RequestMappingMetadata = defaultMetadata,): MethodDecorator => {
 
     const pathMetadata = metadata[PATH_METADATA];
-    const path = pathMetadata && pathMetadata.length ? pathMetadata : '/';
+    let path
+    if (typeof pathMetadata == "string") {
+        path = pathMetadata && pathMetadata.length ? pathMetadata : '/';
+    } else {
+        path = pathMetadata;
+    }
+
     const requestMethod = metadata[METHOD_METADATA] || RequestMethod.GET;
 
     return (target, key, descriptor: PropertyDescriptor) => {
@@ -34,7 +40,7 @@ export const RequestMapping = (metadata: RequestMappingMetadata = defaultMetadat
 };
 
 const createMappingDecorator = (method: RequestMethod) => {
-    return function (path?: string | string[],) {
+    return function (path?: string | string[] | RegExp | RegExp[]) {
         return RequestMapping({
             [PATH_METADATA]: path,
             [METHOD_METADATA]: method,

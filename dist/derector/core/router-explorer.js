@@ -44,7 +44,16 @@ class RouterExplorer {
         }
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
-            const fullPath = shared_utils_1.cleanUrl(basePath) + path;
+            let fullPath = shared_utils_1.cleanUrl(basePath) + path;
+            if (path instanceof RegExp) {
+                let reg_basePath = basePath.replace("/", "\/");
+                let reg_path = path.source;
+                if (!/\/$/.test(reg_basePath)) {
+                    reg_basePath = reg_basePath + '/';
+                }
+                let reg_fullPath = reg_basePath + reg_path;
+                fullPath = new RegExp(reg_fullPath);
+            }
             this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
             if (all_filter.length > 0) {
                 let tmpArray = [];
@@ -68,7 +77,12 @@ class RouterExplorer {
         if (shared_utils_1.isUndefined(path)) {
             throw new Error('UnknownRequestMappingException');
         }
-        return shared_utils_1.validatePath(path);
+        if (typeof path == "string") {
+            return shared_utils_1.validatePath(path);
+        }
+        else {
+            return path;
+        }
     }
     scanForPaths(instance, prototype) {
         const instancePrototype = shared_utils_1.isUndefined(prototype) ? Object.getPrototypeOf(instance) : prototype;
@@ -84,9 +98,13 @@ class RouterExplorer {
             return null;
         }
         const requestMethod = Reflect.getMetadata(constants_1.METHOD_METADATA, targetCallback);
-        const path = shared_utils_1.isString(routePath)
-            ? [this.validateRoutePath(routePath)]
-            : routePath.map(p => this.validateRoutePath(p));
+        let path;
+        if (routePath instanceof Array) {
+            path = routePath.map(p => this.validateRoutePath(p));
+        }
+        else {
+            path = [this.validateRoutePath(routePath)];
+        }
         return {
             path,
             requestMethod,

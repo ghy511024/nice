@@ -17,7 +17,13 @@ const defaultMetadata = {
 };
 exports.RequestMapping = (metadata = defaultMetadata) => {
     const pathMetadata = metadata[constants_1.PATH_METADATA];
-    const path = pathMetadata && pathMetadata.length ? pathMetadata : '/';
+    let path;
+    if (typeof pathMetadata == "string") {
+        path = pathMetadata && pathMetadata.length ? pathMetadata : '/';
+    }
+    else {
+        path = pathMetadata;
+    }
     const requestMethod = metadata[constants_1.METHOD_METADATA] || request_method_enum_1.RequestMethod.GET;
     return (target, key, descriptor) => {
         Reflect.defineMetadata(constants_1.PATH_METADATA, path, descriptor.value);

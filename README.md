@@ -41,6 +41,12 @@ export class ListController {
         let data = {code: 0}
         res.send(data)
     }
+    // 正则
+    @Get(/(shangpu|xiezilou|)(chuzu|)-list/)
+    async someFun(req, res) {
+        let data = {code: 0}
+        res.send(data)
+    }
 }
 
 ```

@@ -10,7 +10,7 @@ import {RouterMethodFactory} from './router-method-factory';
 
 
 export interface RoutePathProperties {
-    path: string[];
+    path: string[] | RegExp[];
     requestMethod: RequestMethod;
     targetCallback: RouterProxyCallback;
     methodName: string;
@@ -22,14 +22,14 @@ export class RouterExplorer {
     private readonly routerMethodFactory = new RouterMethodFactory();
     private readonly exceptionFiltersCache = new WeakMap();
     private applicationRef: any;
-    private allPaths: string[] = [];
+    private allPaths: string[] | RegExp[] = [];
     private routerProxy = new RouterProxy()
 
     constructor(private readonly metadataScanner: MetadataScanner, applicationRef) {
         this.applicationRef = applicationRef;
     }
 
-    public getAllpaths(): string[] {
+    public getAllpaths(): string[] | RegExp[] {
         return this.allPaths;
     }
 
@@ -75,7 +75,17 @@ export class RouterExplorer {
         );
 
         paths.forEach(path => {
-            const fullPath = cleanUrl(basePath) + path;
+            let fullPath: string | RegExp = cleanUrl(basePath) + path;
+
+            if (path instanceof RegExp) {
+                let reg_basePath = basePath.replace("/", "\/");
+                let reg_path = (path as RegExp).source
+                if (!/\/$/.test(reg_basePath)) {
+                    reg_basePath = reg_basePath + '/'
+                }
+                let reg_fullPath = reg_basePath + reg_path
+                fullPath = new RegExp(reg_fullPath);
+            }
             this.allPaths.push(cleanUrl(fullPath) || '/')
             if (all_filter.length > 0) {
                 let tmpArray = []
@@ -95,18 +105,23 @@ export class RouterExplorer {
     public extractRouterPath(
         metatype: Type<Controller>,
         prefix?: string,
-    ): string {
+    ): string | RegExp {
         let path = Reflect.getMetadata(PATH_METADATA, metatype);
         if (prefix) path = prefix + this.validateRoutePath(path);
         return this.validateRoutePath(path);
     }
 
-    public validateRoutePath(path: string): string {
+    public validateRoutePath(path: string | RegExp): string | RegExp {
         if (isUndefined(path)) {
             // throw new UnknownRequestMappingException();
             throw new Error('UnknownRequestMappingException');
         }
-        return validatePath(path);
+        if (typeof path == "string") {
+            return validatePath(path);
+        } else {
+            return path
+        }
+
     }
 
     public scanForPaths(instance: Controller, prototype?: any,): RoutePathProperties[] {
@@ -137,9 +152,12 @@ export class RouterExplorer {
             METHOD_METADATA,
             targetCallback,
         );
-        const path = isString(routePath)
-            ? [this.validateRoutePath(routePath)]
-            : routePath.map(p => this.validateRoutePath(p));
+        let path;
+        if (routePath instanceof Array) {
+            path = routePath.map(p => this.validateRoutePath(p));
+        } else {
+            path = [this.validateRoutePath(routePath)]
+        }
         return {
             path,
             requestMethod,

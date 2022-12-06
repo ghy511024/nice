@@ -7,12 +7,14 @@ export const isConstructor = (fn: any): boolean => fn === 'constructor';
 export const isNil = (obj: any): obj is null | undefined => isUndefined(obj) || obj === null;
 export const isEmpty = (array: any): boolean => !(array && array.length > 0);
 export const isSymbol = (fn: any): fn is symbol => typeof fn === 'symbol';
-export const cleanUrl = (str: string) => {
-    let result = str
-    result = result.replace(/^\/+/gi, '/')
-    if (result[result.length - 1] === '/') {
-
-        result = result.slice(0, result.length - 1)
+export const cleanUrl = (str?: string | RegExp) => {
+    if (typeof str == "string") {
+        let result = str
+        result = result.replace(/^\/+/gi, '/')
+        if (result[result.length - 1] === '/') {
+            result = result.slice(0, result.length - 1)
+        }
+        return result;
     }
-    return result;
+    return str;
 }
