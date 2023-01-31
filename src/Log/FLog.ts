@@ -5,18 +5,25 @@
  *console.log('\033[42;30m DONE \033[40;32m Compiled successfully in 19987ms\033[0m')
  * */
 
-// import {configure, Logger, getLogger} from 'log4js';
+let _log
+if (typeof console['_log'] != "function") {
+    console['_log'] = console.log;
+    console['_error'] = console.error;
+    // 劫持
+    let success_color = "\x1B[0;32m"
+    let error_color = "\x1B[0;31m"
+    let date = new Date();
+    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`
 
-// configure({
-//     appenders: {
-//         out: {type: 'console'}
-//     },
-//     categories: {
-//         default: {appenders: ['out'], level: 'debug'}
-//     },
-//     pm2: true,
-//     pm2InstanceVar: 'INSTANCE_ID'
-// })
+    console.log = (...args) => {
+        var msg = success_color + time + success_color;
+        console['_log'](msg, ...args)
+    }
+    console.error = (...args) => {
+        var msg = error_color + time + error_color;
+        console['_error'](msg, ...args)
+    }
+}
 
 
 function isOnline() {
@@ -32,9 +39,9 @@ function flog(type, sys, ...args) {
         myc = "\x1B[0;31m"
     }
     let date = new Date();
-    let time=`[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`
+    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`
     var msg = myc + time + myc + " " + type + " " + myc + sys
-    console.log(msg, '\x1B[0m-', ...args)
+    console["_log"](msg, '\x1B[0m-', ...args)
 }
 
 function logERR(type, sys, ...args) {
@@ -45,7 +52,7 @@ function logERR(type, sys, ...args) {
         myc = "\x1B[0;31m"
     }
     let date = new Date();
-    let time=`[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`
+    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`
     var msg = myc + time + myc + " " + type + " " + myc + sys
     console.error(msg, '\x1B[0m-', ...args)
 }
@@ -61,7 +68,7 @@ function getStr(msg, req, res) {
         ":protocol": req.protocol,
         ":hostname": req.hostname,
         ":method": req.method,
-        ":status": res.__statusCode || res.statusCode,
+        ":status": '| '+(res.__statusCode || res.statusCode), // 加 | 主要是方便 线上服务器方便grep
         ":response-time": res.responseTime,
         ":date": new Date().toLocaleString(),
         ":referrer": req.headers.referer || req.headers.referrer || '',

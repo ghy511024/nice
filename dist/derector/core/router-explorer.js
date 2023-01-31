@@ -44,17 +44,17 @@ class RouterExplorer {
         }
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
-            const fullPath = shared_utils_1.cleanUrl(basePath) + path;
-            this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
+            const fullPath = (0, shared_utils_1.cleanUrl)(basePath) + path;
+            this.allPaths.push((0, shared_utils_1.cleanUrl)(fullPath) || '/');
             if (all_filter.length > 0) {
                 let tmpArray = [];
-                tmpArray.push(shared_utils_1.cleanUrl(fullPath) || '/');
+                tmpArray.push((0, shared_utils_1.cleanUrl)(fullPath) || '/');
                 tmpArray = tmpArray.concat(all_filter);
                 tmpArray.push(proxy);
                 routerMethod.apply(this, tmpArray);
             }
             else {
-                routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', proxy);
+                routerMethod((0, shared_utils_1.cleanUrl)(fullPath) || '/', proxy);
             }
         });
     }
@@ -65,13 +65,13 @@ class RouterExplorer {
         return this.validateRoutePath(path);
     }
     validateRoutePath(path) {
-        if (shared_utils_1.isUndefined(path)) {
+        if ((0, shared_utils_1.isUndefined)(path)) {
             throw new Error('UnknownRequestMappingException');
         }
-        return shared_utils_1.validatePath(path);
+        return (0, shared_utils_1.validatePath)(path);
     }
     scanForPaths(instance, prototype) {
-        const instancePrototype = shared_utils_1.isUndefined(prototype) ? Object.getPrototypeOf(instance) : prototype;
+        const instancePrototype = (0, shared_utils_1.isUndefined)(prototype) ? Object.getPrototypeOf(instance) : prototype;
         return this.metadataScanner.scanFromPrototype(instance, instancePrototype, method => {
             return this.exploreMethodMetadata(instance, instancePrototype, method);
         });
@@ -80,11 +80,11 @@ class RouterExplorer {
         const targetCallback = instancePrototype[methodName];
         const routePath = Reflect.getMetadata(constants_1.PATH_METADATA, targetCallback);
         const midware = Reflect.getMetadata(constants_1.MIDDLEWARE_METADATA, targetCallback);
-        if (shared_utils_1.isUndefined(routePath)) {
+        if ((0, shared_utils_1.isUndefined)(routePath)) {
             return null;
         }
         const requestMethod = Reflect.getMetadata(constants_1.METHOD_METADATA, targetCallback);
-        const path = shared_utils_1.isString(routePath)
+        const path = (0, shared_utils_1.isString)(routePath)
             ? [this.validateRoutePath(routePath)]
             : routePath.map(p => this.validateRoutePath(p));
         return {

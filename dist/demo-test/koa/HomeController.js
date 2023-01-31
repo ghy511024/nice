@@ -35,20 +35,20 @@ let HomeController = class HomeController {
     }
 };
 __decorate([
-    fun_decorator_1.Get("/data"),
-    fun_decorator_1.Mid([mid2, mid3]),
+    (0, fun_decorator_1.Get)("/data"),
+    (0, fun_decorator_1.Mid)([mid2, mid3]),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], HomeController.prototype, "data", null);
 __decorate([
-    fun_decorator_1.Get("/test"),
-    fun_decorator_1.Mid(mid1),
+    (0, fun_decorator_1.Get)("/test"),
+    (0, fun_decorator_1.Mid)(mid1),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], HomeController.prototype, "test", null);
 HomeController = __decorate([
-    fun_decorator_1.Controller('/active')
+    (0, fun_decorator_1.Controller)('/active')
 ], HomeController);
 exports.HomeController = HomeController;
