@@ -5,7 +5,7 @@ import { Controller } from '../../interfaces/controller.interface';
 import { Type } from '../../interfaces/type.interface';
 import { MetadataScanner } from './metadata-scanner';
 export interface RoutePathProperties {
-    path: string[];
+    path: string[] | RegExp[];
     requestMethod: RequestMethod;
     targetCallback: RouterProxyCallback;
     methodName: string;
@@ -19,13 +19,13 @@ export declare class RouterExplorer {
     private allPaths;
     private routerProxy;
     constructor(metadataScanner: MetadataScanner, applicationRef: any);
-    getAllpaths(): string[];
+    getAllpaths(): string[] | RegExp[];
     explore(instance: any, basePath: string, root_filter: any): void;
     logger(...arg: any[]): void;
     applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter: any): void;
     private applyCallbackToRouter;
-    extractRouterPath(metatype: Type<Controller>, prefix?: string): string;
-    validateRoutePath(path: string): string;
+    extractRouterPath(metatype: Type<Controller>, prefix?: string): string | RegExp;
+    validateRoutePath(path: string | RegExp): string | RegExp;
     scanForPaths(instance: Controller, prototype?: any): RoutePathProperties[];
     exploreMethodMetadata(instance: Controller, instancePrototype: any, methodName: string): RoutePathProperties;
     private createCallbackProxy;

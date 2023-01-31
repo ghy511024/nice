@@ -20,11 +20,14 @@ exports.isEmpty = isEmpty;
 const isSymbol = (fn) => typeof fn === 'symbol';
 exports.isSymbol = isSymbol;
 const cleanUrl = (str) => {
-    let result = str;
-    result = result.replace(/^\/+/gi, '/');
-    if (result[result.length - 1] === '/') {
-        result = result.slice(0, result.length - 1);
+    if (typeof str == "string") {
+        let result = str;
+        result = result.replace(/^\/+/gi, '/');
+        if (result[result.length - 1] === '/') {
+            result = result.slice(0, result.length - 1);
+        }
+        return result;
     }
-    return result;
+    return str;
 };
 exports.cleanUrl = cleanUrl;
