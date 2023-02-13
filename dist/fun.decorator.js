@@ -15,7 +15,7 @@ const defaultMetadata = {
     [constants_1.PATH_METADATA]: '/',
     [constants_1.METHOD_METADATA]: request_method_enum_1.RequestMethod.GET,
 };
-const RequestMapping = (metadata = defaultMetadata) => {
+exports.RequestMapping = (metadata = defaultMetadata) => {
     const pathMetadata = metadata[constants_1.PATH_METADATA];
     let path;
     if (typeof pathMetadata == "string") {
@@ -31,10 +31,9 @@ const RequestMapping = (metadata = defaultMetadata) => {
         return descriptor;
     };
 };
-exports.RequestMapping = RequestMapping;
 const createMappingDecorator = (method) => {
     return function (path) {
-        return (0, exports.RequestMapping)({
+        return exports.RequestMapping({
             [constants_1.PATH_METADATA]: path,
             [constants_1.METHOD_METADATA]: method,
         });
@@ -69,9 +68,9 @@ const createMidWareDecorator = () => {
 };
 function Controller(prefixOrOptions) {
     const defaultPath = '/';
-    const [path, scopeOptions] = (0, shared_utils_1.isUndefined)(prefixOrOptions)
+    const [path, scopeOptions] = shared_utils_1.isUndefined(prefixOrOptions)
         ? [defaultPath, undefined]
-        : (0, shared_utils_1.isString)(prefixOrOptions)
+        : shared_utils_1.isString(prefixOrOptions)
             ? [prefixOrOptions, undefined]
             : [prefixOrOptions.path || defaultPath, { scope: prefixOrOptions.scope }];
     return (target) => {

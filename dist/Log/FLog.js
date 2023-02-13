@@ -7,13 +7,15 @@ if (typeof console['_log'] != "function") {
     console['_error'] = console.error;
     let success_color = "\x1B[0;32m";
     let error_color = "\x1B[0;31m";
-    let date = new Date();
-    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
     console.log = (...args) => {
+        let date = new Date();
+        let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
         var msg = success_color + time + success_color;
         console['_log'](msg, ...args);
     };
     console.error = (...args) => {
+        let date = new Date();
+        let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
         var msg = error_color + time + error_color;
         console['_error'](msg, ...args);
     };

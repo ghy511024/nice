@@ -23,18 +23,18 @@ let DemoController = class DemoController {
     }
 };
 __decorate([
-    (0, fun_decorator_1.Get)("/di"),
+    fun_decorator_1.Get("/di"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], DemoController.prototype, "data", null);
 __decorate([
-    (0, fun_decorator_1.Get)("/ghy/:_xixi"),
+    fun_decorator_1.Get("/ghy/:_xixi"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], DemoController.prototype, "xixi", null);
 DemoController = __decorate([
-    (0, fun_decorator_1.Controller)('/')
+    fun_decorator_1.Controller('/')
 ], DemoController);
 exports.DemoController = DemoController;

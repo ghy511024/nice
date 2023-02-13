@@ -44,7 +44,7 @@ class RouterExplorer {
         }
         const proxy = this.createCallbackProxy(targetCallback);
         paths.forEach(path => {
-            let fullPath = (0, shared_utils_1.cleanUrl)(basePath) + path;
+            let fullPath = shared_utils_1.cleanUrl(basePath) + path;
             if (path instanceof RegExp) {
                 let reg_basePath = basePath.replace("/", "\/");
                 let reg_path = path.source;
@@ -54,16 +54,16 @@ class RouterExplorer {
                 let reg_fullPath = reg_basePath + reg_path;
                 fullPath = new RegExp(reg_fullPath);
             }
-            this.allPaths.push((0, shared_utils_1.cleanUrl)(fullPath) || '/');
+            this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');
             if (all_filter.length > 0) {
                 let tmpArray = [];
-                tmpArray.push((0, shared_utils_1.cleanUrl)(fullPath) || '/');
+                tmpArray.push(shared_utils_1.cleanUrl(fullPath) || '/');
                 tmpArray = tmpArray.concat(all_filter);
                 tmpArray.push(proxy);
                 routerMethod.apply(this, tmpArray);
             }
             else {
-                routerMethod((0, shared_utils_1.cleanUrl)(fullPath) || '/', proxy);
+                routerMethod(shared_utils_1.cleanUrl(fullPath) || '/', proxy);
             }
         });
     }
@@ -74,18 +74,18 @@ class RouterExplorer {
         return this.validateRoutePath(path);
     }
     validateRoutePath(path) {
-        if ((0, shared_utils_1.isUndefined)(path)) {
+        if (shared_utils_1.isUndefined(path)) {
             throw new Error('UnknownRequestMappingException');
         }
         if (typeof path == "string") {
-            return (0, shared_utils_1.validatePath)(path);
+            return shared_utils_1.validatePath(path);
         }
         else {
             return path;
         }
     }
     scanForPaths(instance, prototype) {
-        const instancePrototype = (0, shared_utils_1.isUndefined)(prototype) ? Object.getPrototypeOf(instance) : prototype;
+        const instancePrototype = shared_utils_1.isUndefined(prototype) ? Object.getPrototypeOf(instance) : prototype;
         return this.metadataScanner.scanFromPrototype(instance, instancePrototype, method => {
             return this.exploreMethodMetadata(instance, instancePrototype, method);
         });
@@ -94,7 +94,7 @@ class RouterExplorer {
         const targetCallback = instancePrototype[methodName];
         const routePath = Reflect.getMetadata(constants_1.PATH_METADATA, targetCallback);
         const midware = Reflect.getMetadata(constants_1.MIDDLEWARE_METADATA, targetCallback);
-        if ((0, shared_utils_1.isUndefined)(routePath)) {
+        if (shared_utils_1.isUndefined(routePath)) {
             return null;
         }
         const requestMethod = Reflect.getMetadata(constants_1.METHOD_METADATA, targetCallback);
