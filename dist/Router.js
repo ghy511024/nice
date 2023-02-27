@@ -44,7 +44,6 @@ class Router extends BasicRouter_1.BasicRouter {
                 option = Object.assign(option, this.config.wf);
             }
             option['debug'] = !!this.config.debug;
-            WFManager.init(option);
         }, 100);
     }
     initWMonitor() {

@@ -5,5 +5,5 @@ export declare class RoutesResolver {
     private metadataScanner;
     constructor(applicationRef: any);
     registerRouters(userRoutes: any, basePath?: any): void;
-    getAllPaths(): string[];
+    getAllPaths(): (string | RegExp)[];
 }

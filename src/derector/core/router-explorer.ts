@@ -22,18 +22,18 @@ export class RouterExplorer {
     private readonly routerMethodFactory = new RouterMethodFactory();
     private readonly exceptionFiltersCache = new WeakMap();
     private applicationRef: any;
-    private allPaths: string[] | RegExp[] = [];
+    private allPaths: (string | RegExp)[] = [];
     private routerProxy = new RouterProxy()
 
     constructor(private readonly metadataScanner: MetadataScanner, applicationRef) {
         this.applicationRef = applicationRef;
     }
 
-    public getAllpaths(): string[] | RegExp[] {
+    public getAllpaths(): (string | RegExp)[] {
         return this.allPaths;
     }
 
-    public explore(instance, basePath: string, root_filter) {
+    public explore(instance, basePath: string | RegExp, root_filter) {
 
         const routerPaths = this.scanForPaths(instance);
 
@@ -44,7 +44,7 @@ export class RouterExplorer {
         console.log(...arg)
     }
 
-    public applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter) {
+    public applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string | RegExp, root_filter) {
         let pathArray = [];
         (routePaths || []).forEach(pathProperties => {
             const {path, requestMethod} = pathProperties;
@@ -52,7 +52,7 @@ export class RouterExplorer {
         });
     }
 
-    private applyCallbackToRouter(pathProperties: RoutePathProperties, basePath: string, root_filter) {
+    private applyCallbackToRouter(pathProperties: RoutePathProperties, basePath: string | RegExp, root_filter) {
         const {
             path: paths,
             requestMethod,
@@ -78,12 +78,18 @@ export class RouterExplorer {
             let fullPath: string | RegExp = cleanUrl(basePath) + path;
 
             if (path instanceof RegExp) {
-                let reg_basePath = basePath.replace("/", "\/");
-                let reg_path = (path as RegExp).source
-                if (!/\/$/.test(reg_basePath)) {
-                    reg_basePath = reg_basePath + '/'
+                let reg_basePath = basePath
+                let reg_fullPath
+                if (typeof basePath == "string") {
+                    reg_basePath = basePath.replace("/", "\/");
+                    let reg_path = (path as RegExp).source
+                    if (!/\/$/.test(reg_basePath)) {
+                        reg_basePath = reg_basePath + '/'
+                    }
+                    reg_fullPath = reg_basePath + reg_path
                 }
-                let reg_fullPath = reg_basePath + reg_path
+
+
                 fullPath = new RegExp(reg_fullPath);
             }
             this.allPaths.push(cleanUrl(fullPath) || '/')
@@ -139,9 +145,8 @@ export class RouterExplorer {
         methodName: string,      // 方法名
     ): RoutePathProperties {
         const targetCallback = instancePrototype[methodName];
-
+        // 路由路径
         const routePath = Reflect.getMetadata(PATH_METADATA, targetCallback);
-
         // 中间件
         const midware = Reflect.getMetadata(MIDDLEWARE_METADATA, targetCallback);
 

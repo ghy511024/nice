@@ -42,7 +42,7 @@ export class Router extends BasicRouter {
                 option = Object.assign(option, this.config.wf)
             }
             option['debug'] = !!this.config.debug;
-            WFManager.init(option)
+            // WFManager.init(option)
         }, 100)
     }
 

@@ -19,10 +19,10 @@ export declare class RouterExplorer {
     private allPaths;
     private routerProxy;
     constructor(metadataScanner: MetadataScanner, applicationRef: any);
-    getAllpaths(): string[] | RegExp[];
-    explore(instance: any, basePath: string, root_filter: any): void;
+    getAllpaths(): (string | RegExp)[];
+    explore(instance: any, basePath: string | RegExp, root_filter: any): void;
     logger(...arg: any[]): void;
-    applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string, root_filter: any): void;
+    applyPathsToRouterProxy(routePaths: RoutePathProperties[], basePath: string | RegExp, root_filter: any): void;
     private applyCallbackToRouter;
     extractRouterPath(metatype: Type<Controller>, prefix?: string): string | RegExp;
     validateRoutePath(path: string | RegExp): string | RegExp;

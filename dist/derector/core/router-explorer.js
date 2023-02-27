@@ -46,12 +46,16 @@ class RouterExplorer {
         paths.forEach(path => {
             let fullPath = shared_utils_1.cleanUrl(basePath) + path;
             if (path instanceof RegExp) {
-                let reg_basePath = basePath.replace("/", "\/");
-                let reg_path = path.source;
-                if (!/\/$/.test(reg_basePath)) {
-                    reg_basePath = reg_basePath + '/';
+                let reg_basePath = basePath;
+                let reg_fullPath;
+                if (typeof basePath == "string") {
+                    reg_basePath = basePath.replace("/", "\/");
+                    let reg_path = path.source;
+                    if (!/\/$/.test(reg_basePath)) {
+                        reg_basePath = reg_basePath + '/';
+                    }
+                    reg_fullPath = reg_basePath + reg_path;
                 }
-                let reg_fullPath = reg_basePath + reg_path;
                 fullPath = new RegExp(reg_fullPath);
             }
             this.allPaths.push(shared_utils_1.cleanUrl(fullPath) || '/');

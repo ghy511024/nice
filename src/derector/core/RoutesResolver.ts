@@ -26,7 +26,7 @@ export class RoutesResolver {
         this.routerBuilder.explore(instance, basepath, filter);
     }
 
-    getAllPaths(): string[] {
+    getAllPaths(): (string|RegExp)[] {
         return this.routerBuilder.getAllpaths();
     }
 }

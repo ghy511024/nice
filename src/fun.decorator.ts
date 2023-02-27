@@ -21,7 +21,6 @@ const defaultMetadata = {
 };
 
 export const RequestMapping = (metadata: RequestMappingMetadata = defaultMetadata,): MethodDecorator => {
-
     const pathMetadata = metadata[PATH_METADATA];
     let path
     if (typeof pathMetadata == "string") {
@@ -29,9 +28,7 @@ export const RequestMapping = (metadata: RequestMappingMetadata = defaultMetadat
     } else {
         path = pathMetadata;
     }
-
     const requestMethod = metadata[METHOD_METADATA] || RequestMethod.GET;
-
     return (target, key, descriptor: PropertyDescriptor) => {
         Reflect.defineMetadata(PATH_METADATA, path, descriptor.value);
         Reflect.defineMetadata(METHOD_METADATA, requestMethod, descriptor.value);
