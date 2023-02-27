@@ -172,9 +172,7 @@ export class RouterExplorer {
         };
     }
 
-    private createCallbackProxy(
-        callback: RouterProxyCallback,
-    ) {
+    private createCallbackProxy(callback: RouterProxyCallback,) {
         return this.routerProxy.createProxy(callback)
     }
 
