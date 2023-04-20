@@ -9,13 +9,13 @@ if (typeof console['_log'] != "function") {
     let error_color = "\x1B[0;31m";
     console.log = (...args) => {
         let date = new Date();
-        let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
+        let time = `[${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
         var msg = success_color + time + success_color;
         console['_log'](msg, ...args);
     };
     console.error = (...args) => {
         let date = new Date();
-        let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
+        let time = `[${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
         var msg = error_color + time + error_color;
         console['_error'](msg, ...args);
     };
@@ -32,7 +32,7 @@ function flog(type, sys, ...args) {
         myc = "\x1B[0;31m";
     }
     let date = new Date();
-    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
+    let time = `[${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
     var msg = myc + time + myc + " " + type + " " + myc + sys;
     console["_log"](msg, '\x1B[0m-', ...args);
 }
@@ -45,12 +45,12 @@ function logERR(type, sys, ...args) {
         myc = "\x1B[0;31m";
     }
     let date = new Date();
-    let time = `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
+    let time = `[${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}]`;
     var msg = myc + time + myc + " " + type + " " + myc + sys;
     console.error(msg, '\x1B[0m-', ...args);
 }
 function getUrls(req) {
-    return req.originalUrl || req.url;
+    return req.hostname + req.originalUrl || req.url;
 }
 function getStr(msg, req, res) {
     var array = msg.split(' ');
@@ -100,9 +100,17 @@ class Flog {
             const start = +new Date();
             res.on('finish', () => {
                 res.responseTime = (+new Date() - start) + "ms";
-                let str = ':method :url :status :response-time';
-                const logstr = getStr(str, req, res);
-                logger.log(logstr);
+                if (res.statusCode == 301 || res.statusCode == 302) {
+                    let location = res.get('location');
+                    let str = `:method :url :status -> ${location} :response-time`;
+                    const logstr = getStr(str, req, res);
+                    logger.log(logstr);
+                }
+                else {
+                    let str = ':method :url :status :response-time';
+                    const logstr = getStr(str, req, res);
+                    logger.log(logstr);
+                }
             });
             return next();
         };
