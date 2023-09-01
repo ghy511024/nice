@@ -50,6 +50,9 @@ function logERR(type, sys, ...args) {
     console.error(msg, '\x1B[0m-', ...args);
 }
 function getUrls(req) {
+    if (req.headers['current_url']) {
+        return req.headers['current_url'];
+    }
     return req.hostname + req.originalUrl || req.url;
 }
 function getStr(msg, req, res) {

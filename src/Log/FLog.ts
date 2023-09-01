@@ -60,6 +60,9 @@ function logERR(type, sys, ...args) {
 }
 
 function getUrls(req) {
+    if (req.headers['current_url']) {
+        return req.headers['current_url']
+    }
     return req.hostname + req.originalUrl || req.url;
 }
 
