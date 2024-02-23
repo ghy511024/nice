@@ -4,8 +4,7 @@
   "main": "./dist/Router.js",
   "types": "./dist/Router.d.ts",
   "scripts": {
-    "build": "tsc",
-    "pub": "npm publish --registry http://ires.58corp.com/repository/npm/"
+    "build": "tsc"
   },
   "dependencies": {
     "@types/express": "^4.17.3",
@@ -18,7 +17,7 @@
     "@wb/wmonitor": "0.0.6"
   },
   "description": "a mvc router for express && koa",
-  "repository": "git@igit.58corp.com:fanglib/nice.git",
+  "repository": "git@github.com:ghy511024/nice.git",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.12.42",

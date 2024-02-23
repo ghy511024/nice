@@ -6,7 +6,7 @@
 #### 安装
 
 ```shell
-npm i @wb/nice -D --registry http://ires.58corp.com/repository/58npm/
+npm i @wb/nice -D
 ```
 
 #### 使用样例
@@ -20,7 +20,7 @@ src
     ├─router
     │  └─Router.ts
     └─server.ts
-
+ 
 ```
 
 

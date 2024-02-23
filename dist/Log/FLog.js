@@ -53,7 +53,7 @@ function getUrls(req) {
     if (req.headers['current_url']) {
         return req.headers['current_url'];
     }
-    return req.hostname + req.originalUrl || req.url;
+    return (req.headers["https-tag"] || req.protocol) + "//" + req.hostname + req.originalUrl || req.url;
 }
 function getStr(msg, req, res) {
     var array = msg.split(' ');
